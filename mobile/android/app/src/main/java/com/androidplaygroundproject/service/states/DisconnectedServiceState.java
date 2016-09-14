@@ -5,14 +5,14 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.service.states;
+package com.androidplaygroundproject.service.states;
 
 import android.util.Log;
 
-import com.parrot.freeflight.service.DroneControlService;
-import com.parrot.freeflight.service.ServiceStateBase;
-import com.parrot.freeflight.service.commands.ConnectCommand;
-import com.parrot.freeflight.service.commands.DroneServiceCommand;
+import com.androidplaygroundproject.service.DroneControlService;
+import com.androidplaygroundproject.service.ServiceStateBase;
+import com.androidplaygroundproject.service.commands.ConnectCommand;
+import com.androidplaygroundproject.service.commands.DroneServiceCommand;
 
 public class DisconnectedServiceState 
 	extends ServiceStateBase

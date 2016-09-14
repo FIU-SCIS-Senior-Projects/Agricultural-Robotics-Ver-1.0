@@ -1,10 +1,10 @@
-package com.parrot.freeflight;
+package com.androidplaygroundproject;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
 import android.util.Log;
 
-import com.parrot.freeflight.settings.ApplicationSettings;
+import com.androidplaygroundproject.settings.ApplicationSettings;
 
 public class FreeFlightApplication 
 	extends Application 

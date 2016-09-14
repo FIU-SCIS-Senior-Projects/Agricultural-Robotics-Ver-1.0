@@ -1,7 +1,7 @@
-package com.parrot.freeflight.ui;
+package com.androidplaygroundproject.ui;
 
-import com.parrot.freeflight.activities.SettingsDialog;
-import com.parrot.freeflight.settings.ApplicationSettings.EAppSettingProperty;
+import com.androidplaygroundproject.activities.SettingsDialog;
+import com.androidplaygroundproject.settings.ApplicationSettings.EAppSettingProperty;
 
 public interface SettingsDialogDelegate
 {

@@ -1,5 +1,5 @@
 
-package com.parrot.freeflight.ui;
+package com.androidplaygroundproject.ui;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,15 +31,15 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
-import com.parrot.freeflight.R;
-import com.parrot.freeflight.drone.DroneConfig;
-import com.parrot.freeflight.drone.DroneConfig.EDroneVersion;
-import com.parrot.freeflight.settings.ApplicationSettings;
-import com.parrot.freeflight.ui.adapters.SettingsViewAdapter;
-import com.parrot.freeflight.ui.controls.ViewPagerIndicator;
-import com.parrot.freeflight.ui.filters.NetworkNameFilter;
-import com.parrot.freeflight.ui.listeners.OnSeekChangedListener;
-import com.parrot.freeflight.utils.FontUtils;
+import com.androidplaygroundproject.R;
+import com.androidplaygroundproject.drone.DroneConfig;
+import com.androidplaygroundproject.drone.DroneConfig.EDroneVersion;
+import com.androidplaygroundproject.settings.ApplicationSettings;
+import com.androidplaygroundproject.ui.adapters.SettingsViewAdapter;
+import com.androidplaygroundproject.ui.controls.ViewPagerIndicator;
+import com.androidplaygroundproject.ui.filters.NetworkNameFilter;
+import com.androidplaygroundproject.ui.listeners.OnSeekChangedListener;
+import com.androidplaygroundproject.utils.FontUtils;
 
 public class SettingsViewController
         implements OnPageChangeListener,

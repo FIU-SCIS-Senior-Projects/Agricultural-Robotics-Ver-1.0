@@ -1,4 +1,4 @@
-package com.parrot.freeflight.ui.hud;
+package com.androidplaygroundproject.ui.hud;
 
 import javax.microedition.khronos.opengles.GL10;
 
@@ -11,7 +11,7 @@ import android.graphics.Typeface;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.parrot.freeflight.ui.gl.GLSprite;
+import com.androidplaygroundproject.ui.gl.GLSprite;
 
 public class Text extends Sprite{
 

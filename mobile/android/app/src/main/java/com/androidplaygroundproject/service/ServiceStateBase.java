@@ -5,9 +5,9 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.service;
+package com.androidplaygroundproject.service;
 
-import com.parrot.freeflight.service.commands.DroneServiceCommand;
+import com.androidplaygroundproject.service.commands.DroneServiceCommand;
 
 
 public abstract class ServiceStateBase 

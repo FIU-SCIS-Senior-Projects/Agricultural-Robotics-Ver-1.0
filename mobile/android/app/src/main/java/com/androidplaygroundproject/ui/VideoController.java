@@ -1,5 +1,5 @@
 
-package com.parrot.freeflight.ui;
+package com.androidplaygroundproject.ui;
 
 import java.util.Formatter;
 import java.util.Locale;
@@ -17,8 +17,8 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-import com.parrot.freeflight.R;
-import com.parrot.freeflight.utils.AnimationUtils;
+import com.androidplaygroundproject.R;
+import com.androidplaygroundproject.utils.AnimationUtils;
 
 public class VideoController implements OnClickListener, OnCompletionListener, OnSeekBarChangeListener
 {

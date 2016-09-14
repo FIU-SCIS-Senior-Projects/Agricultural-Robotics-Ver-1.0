@@ -5,14 +5,14 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.updater.commands;
+package com.androidplaygroundproject.updater.commands;
 
 import android.content.Context;
 
-import com.parrot.freeflight.service.listeners.DroneUpdaterListener.ArDroneToolError;
-import com.parrot.freeflight.updater.UpdateManager;
-import com.parrot.freeflight.updater.UpdaterCommand;
-import com.parrot.freeflight.updater.UpdaterDelegate;
+import com.androidplaygroundproject.service.listeners.DroneUpdaterListener.ArDroneToolError;
+import com.androidplaygroundproject.updater.UpdateManager;
+import com.androidplaygroundproject.updater.UpdaterCommand;
+import com.androidplaygroundproject.updater.UpdaterDelegate;
 
 public abstract class UpdaterCommandBase implements UpdaterCommand 
 {

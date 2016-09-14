@@ -1,4 +1,4 @@
-package com.parrot.freeflight.activities;
+package com.androidplaygroundproject.activities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,19 +24,19 @@ import android.view.ViewGroup;
 import android.view.ViewStub;
 import android.widget.VideoView;
 
-import com.parrot.freeflight.R;
-import com.parrot.freeflight.activities.base.ParrotActivity;
-import com.parrot.freeflight.drone.DroneProxy.EVideoRecorderCapability;
-import com.parrot.freeflight.tasks.GetMediaObjectsListTask;
-import com.parrot.freeflight.tasks.GetMediaObjectsListTask.MediaFilter;
-import com.parrot.freeflight.ui.ActionBar;
-import com.parrot.freeflight.ui.VideoController;
-import com.parrot.freeflight.ui.adapters.GalleryAdapter;
-import com.parrot.freeflight.ui.adapters.GalleryAdapterDelegate;
-import com.parrot.freeflight.utils.DeviceCapabilitiesUtils;
-import com.parrot.freeflight.utils.NookUtils;
-import com.parrot.freeflight.utils.ShareUtils;
-import com.parrot.freeflight.vo.MediaVO;
+import com.androidplaygroundproject.R;
+import com.androidplaygroundproject.activities.base.ParrotActivity;
+import com.androidplaygroundproject.drone.DroneProxy.EVideoRecorderCapability;
+import com.androidplaygroundproject.tasks.GetMediaObjectsListTask;
+import com.androidplaygroundproject.tasks.GetMediaObjectsListTask.MediaFilter;
+import com.androidplaygroundproject.ui.ActionBar;
+import com.androidplaygroundproject.ui.VideoController;
+import com.androidplaygroundproject.ui.adapters.GalleryAdapter;
+import com.androidplaygroundproject.ui.adapters.GalleryAdapterDelegate;
+import com.androidplaygroundproject.utils.DeviceCapabilitiesUtils;
+import com.androidplaygroundproject.utils.NookUtils;
+import com.androidplaygroundproject.utils.ShareUtils;
+import com.androidplaygroundproject.vo.MediaVO;
 
 /**
  * GalleryActivity allows the user to browse media files one by one with ability

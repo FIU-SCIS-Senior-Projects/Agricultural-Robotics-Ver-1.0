@@ -1,4 +1,4 @@
-package com.parrot.freeflight.ui.controls;
+package com.androidplaygroundproject.ui.controls;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -10,7 +10,7 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.parrot.freeflight.R;
+import com.androidplaygroundproject.R;
 
 public class ViewPagerIndicator extends View 
 implements OnPageChangeListener

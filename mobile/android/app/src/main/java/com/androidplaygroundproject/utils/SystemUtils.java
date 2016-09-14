@@ -1,4 +1,4 @@
-package com.parrot.freeflight.utils;
+package com.androidplaygroundproject.utils;
 
 import android.app.ActivityManager;
 import android.app.ActivityManager.MemoryInfo;

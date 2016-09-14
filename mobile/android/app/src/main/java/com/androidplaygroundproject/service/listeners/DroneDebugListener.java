@@ -1,4 +1,4 @@
-package com.parrot.freeflight.service.listeners;
+package com.androidplaygroundproject.service.listeners;
 
 public interface DroneDebugListener 
 {

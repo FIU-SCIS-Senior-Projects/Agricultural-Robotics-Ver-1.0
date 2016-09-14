@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.ui;
+package com.androidplaygroundproject.ui;
 
 import android.app.Activity;
 import android.content.res.Resources;
@@ -23,21 +23,21 @@ import android.view.View.OnTouchListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
 
-import com.parrot.freeflight.R;
-import com.parrot.freeflight.drone.NavData;
-import com.parrot.freeflight.gestures.EnhancedGestureDetector;
-import com.parrot.freeflight.ui.hud.Button;
-import com.parrot.freeflight.ui.hud.Image;
-import com.parrot.freeflight.ui.hud.Image.SizeParams;
-import com.parrot.freeflight.ui.hud.Indicator;
-import com.parrot.freeflight.ui.hud.JoystickBase;
-import com.parrot.freeflight.ui.hud.Sprite;
-import com.parrot.freeflight.ui.hud.Sprite.Align;
-import com.parrot.freeflight.ui.hud.Text;
-import com.parrot.freeflight.ui.hud.ToggleButton;
-import com.parrot.freeflight.utils.FontUtils.TYPEFACE;
-import com.parrot.freeflight.video.VideoStageRenderer;
-import com.parrot.freeflight.video.VideoStageView;
+import com.androidplaygroundproject.R;
+import com.androidplaygroundproject.drone.NavData;
+import com.androidplaygroundproject.gestures.EnhancedGestureDetector;
+import com.androidplaygroundproject.ui.hud.Button;
+import com.androidplaygroundproject.ui.hud.Image;
+import com.androidplaygroundproject.ui.hud.Image.SizeParams;
+import com.androidplaygroundproject.ui.hud.Indicator;
+import com.androidplaygroundproject.ui.hud.JoystickBase;
+import com.androidplaygroundproject.ui.hud.Sprite;
+import com.androidplaygroundproject.ui.hud.Sprite.Align;
+import com.androidplaygroundproject.ui.hud.Text;
+import com.androidplaygroundproject.ui.hud.ToggleButton;
+import com.androidplaygroundproject.utils.FontUtils.TYPEFACE;
+import com.androidplaygroundproject.video.VideoStageRenderer;
+import com.androidplaygroundproject.video.VideoStageView;
 
 public class HudViewController 
 	implements OnTouchListener,

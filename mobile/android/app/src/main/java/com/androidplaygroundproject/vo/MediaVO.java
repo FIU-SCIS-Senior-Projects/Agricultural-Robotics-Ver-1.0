@@ -1,4 +1,4 @@
-package com.parrot.freeflight.vo;
+package com.androidplaygroundproject.vo;
 
 import android.net.Uri;
 

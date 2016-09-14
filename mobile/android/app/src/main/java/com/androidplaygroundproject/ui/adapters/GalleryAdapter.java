@@ -1,4 +1,4 @@
-package com.parrot.freeflight.ui.adapters;
+package com.androidplaygroundproject.ui.adapters;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -15,9 +15,9 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.RelativeLayout;
 
-import com.parrot.freeflight.R;
-import com.parrot.freeflight.tasks.LoadMediaThumbTask;
-import com.parrot.freeflight.vo.MediaVO;
+import com.androidplaygroundproject.R;
+import com.androidplaygroundproject.tasks.LoadMediaThumbTask;
+import com.androidplaygroundproject.vo.MediaVO;
 
 public class GalleryAdapter
         extends PagerAdapter

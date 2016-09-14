@@ -1,11 +1,11 @@
-package com.parrot.freeflight.sensors;
+package com.androidplaygroundproject.sensors;
 
 import android.app.Activity;
 import android.hardware.Sensor;
 import android.hardware.SensorEventListener;
 import android.os.Handler;
 
-import com.parrot.freeflight.remotecontrollers.RemoteManager;
+import com.androidplaygroundproject.remotecontrollers.RemoteManager;
 
 public class RemoteSensorManagerWrapper
         extends SensorManagerWrapper

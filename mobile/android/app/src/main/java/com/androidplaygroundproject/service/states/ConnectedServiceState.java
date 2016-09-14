@@ -5,25 +5,25 @@
  * Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.service.states;
+package com.androidplaygroundproject.service.states;
 
 import android.content.IntentFilter;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.parrot.freeflight.drone.DroneProxy;
-import com.parrot.freeflight.drone.DroneProxyConfigChangedReceiver;
-import com.parrot.freeflight.drone.DroneProxyConfigChangedReceiverDelegate;
-import com.parrot.freeflight.drone.DroneProxyConnectionFailedReceiver;
-import com.parrot.freeflight.drone.DroneProxyConnectionFailedReceiverDelegate;
-import com.parrot.freeflight.drone.DroneProxyDisconnectedReceiver;
-import com.parrot.freeflight.drone.DroneProxyDisconnectedReceiverDelegate;
-import com.parrot.freeflight.service.DroneControlService;
-import com.parrot.freeflight.service.ServiceStateBase;
-import com.parrot.freeflight.service.commands.DisconnectCommand;
-import com.parrot.freeflight.service.commands.DroneServiceCommand;
-import com.parrot.freeflight.service.commands.PauseCommand;
-import com.parrot.freeflight.service.commands.ResumeCommand;
+import com.androidplaygroundproject.drone.DroneProxy;
+import com.androidplaygroundproject.drone.DroneProxyConfigChangedReceiver;
+import com.androidplaygroundproject.drone.DroneProxyConfigChangedReceiverDelegate;
+import com.androidplaygroundproject.drone.DroneProxyConnectionFailedReceiver;
+import com.androidplaygroundproject.drone.DroneProxyConnectionFailedReceiverDelegate;
+import com.androidplaygroundproject.drone.DroneProxyDisconnectedReceiver;
+import com.androidplaygroundproject.drone.DroneProxyDisconnectedReceiverDelegate;
+import com.androidplaygroundproject.service.DroneControlService;
+import com.androidplaygroundproject.service.ServiceStateBase;
+import com.androidplaygroundproject.service.commands.DisconnectCommand;
+import com.androidplaygroundproject.service.commands.DroneServiceCommand;
+import com.androidplaygroundproject.service.commands.PauseCommand;
+import com.androidplaygroundproject.service.commands.ResumeCommand;
 
 public class ConnectedServiceState
         extends ServiceStateBase

@@ -1,4 +1,4 @@
-package com.parrot.freeflight.ui.gl;
+package com.androidplaygroundproject.ui.gl;
 
 import javax.microedition.khronos.opengles.GL10;
 

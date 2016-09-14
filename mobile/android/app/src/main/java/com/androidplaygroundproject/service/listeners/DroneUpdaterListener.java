@@ -5,9 +5,9 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.service.listeners;
+package com.androidplaygroundproject.service.listeners;
 
-import com.parrot.freeflight.updater.UpdaterCommand;
+import com.androidplaygroundproject.updater.UpdaterCommand;
 
 public interface DroneUpdaterListener 
 {

@@ -6,7 +6,7 @@
  */
 
 
-package com.parrot.freeflight.utils;
+package com.androidplaygroundproject.utils;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;

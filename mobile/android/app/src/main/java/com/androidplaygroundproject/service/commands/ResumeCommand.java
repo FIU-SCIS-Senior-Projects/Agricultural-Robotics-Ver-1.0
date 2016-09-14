@@ -5,10 +5,10 @@
  * Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.service.commands;
+package com.androidplaygroundproject.service.commands;
 
-import com.parrot.freeflight.drone.DroneProxy;
-import com.parrot.freeflight.service.DroneControlService;
+import com.androidplaygroundproject.drone.DroneProxy;
+import com.androidplaygroundproject.service.DroneControlService;
 
 public class ResumeCommand extends DroneServiceCommand
 {

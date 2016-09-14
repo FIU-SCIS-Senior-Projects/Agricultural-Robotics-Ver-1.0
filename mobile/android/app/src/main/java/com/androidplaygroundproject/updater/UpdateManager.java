@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.updater;
+package com.androidplaygroundproject.updater;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,17 +20,17 @@ import org.xmlpull.v1.XmlPullParserException;
 import android.content.Context;
 import android.util.Log;
 
-import com.parrot.freeflight.service.listeners.DroneUpdaterListener;
-import com.parrot.freeflight.updater.UpdaterCommand.UpdaterCommandId;
-import com.parrot.freeflight.updater.commands.UpdaterCheckBootloaderCommand;
-import com.parrot.freeflight.updater.commands.UpdaterConnectCommand;
-import com.parrot.freeflight.updater.commands.UpdaterInstallCommand;
-import com.parrot.freeflight.updater.commands.UpdaterRepairBootloaderCommand;
-import com.parrot.freeflight.updater.commands.UpdaterRestartDroneCommand;
-import com.parrot.freeflight.updater.commands.UpdaterUploadFirmwareCommand;
-import com.parrot.freeflight.updater.utils.FirmwareConfig;
-import com.parrot.freeflight.utils.CacheUtils;
-import com.parrot.freeflight.utils.FtpDelegate;
+import com.androidplaygroundproject.service.listeners.DroneUpdaterListener;
+import com.androidplaygroundproject.updater.UpdaterCommand.UpdaterCommandId;
+import com.androidplaygroundproject.updater.commands.UpdaterCheckBootloaderCommand;
+import com.androidplaygroundproject.updater.commands.UpdaterConnectCommand;
+import com.androidplaygroundproject.updater.commands.UpdaterInstallCommand;
+import com.androidplaygroundproject.updater.commands.UpdaterRepairBootloaderCommand;
+import com.androidplaygroundproject.updater.commands.UpdaterRestartDroneCommand;
+import com.androidplaygroundproject.updater.commands.UpdaterUploadFirmwareCommand;
+import com.androidplaygroundproject.updater.utils.FirmwareConfig;
+import com.androidplaygroundproject.utils.CacheUtils;
+import com.androidplaygroundproject.utils.FtpDelegate;
 import com.parrot.ftp.FTPClient;
 
 public final class UpdateManager implements Runnable

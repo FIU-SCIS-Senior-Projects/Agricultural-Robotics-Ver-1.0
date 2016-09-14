@@ -1,11 +1,11 @@
-package com.parrot.freeflight.receivers;
+package com.androidplaygroundproject.receivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.parrot.freeflight.service.intents.DroneStateManager;
+import com.androidplaygroundproject.service.intents.DroneStateManager;
 
 public class DroneAvailabilityReceiver extends BroadcastReceiver {
 

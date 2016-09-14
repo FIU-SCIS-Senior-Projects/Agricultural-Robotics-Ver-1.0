@@ -6,7 +6,7 @@
  */
 
 
-package com.parrot.freeflight.ui.hud;
+package com.androidplaygroundproject.ui.hud;
 
 import javax.microedition.khronos.opengles.GL10;
 
@@ -16,7 +16,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.parrot.freeflight.ui.gl.GLSprite;
+import com.androidplaygroundproject.ui.gl.GLSprite;
 
 public class Button extends Sprite
 {

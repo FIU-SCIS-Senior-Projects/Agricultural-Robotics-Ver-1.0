@@ -1,7 +1,7 @@
-package com.parrot.freeflight.updater.receivers;
+package com.androidplaygroundproject.updater.receivers;
 
-import com.parrot.freeflight.updater.FirmwareUpdateService.ECommand;
-import com.parrot.freeflight.updater.FirmwareUpdateService.ECommandResult;
+import com.androidplaygroundproject.updater.FirmwareUpdateService.ECommand;
+import com.androidplaygroundproject.updater.FirmwareUpdateService.ECommandResult;
 
 public interface FirmwareUpdateServiceReceiverDelegate
 {

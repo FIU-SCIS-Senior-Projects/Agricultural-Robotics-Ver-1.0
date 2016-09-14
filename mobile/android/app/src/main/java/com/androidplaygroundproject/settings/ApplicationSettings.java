@@ -1,4 +1,4 @@
-package com.parrot.freeflight.settings;
+package com.androidplaygroundproject.settings;
 
 import java.util.Hashtable;
 import java.util.Map;

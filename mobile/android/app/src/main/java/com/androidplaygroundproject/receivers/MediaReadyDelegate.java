@@ -1,4 +1,4 @@
-package com.parrot.freeflight.receivers;
+package com.androidplaygroundproject.receivers;
 
 import java.io.File;
 

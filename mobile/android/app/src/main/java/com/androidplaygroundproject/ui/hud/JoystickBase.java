@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.ui.hud;
+package com.androidplaygroundproject.ui.hud;
 
 import javax.microedition.khronos.opengles.GL10;
 
@@ -16,8 +16,8 @@ import android.graphics.RectF;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.parrot.freeflight.R;
-import com.parrot.freeflight.ui.gl.GLSprite;
+import com.androidplaygroundproject.R;
+import com.androidplaygroundproject.ui.gl.GLSprite;
 
 public abstract class JoystickBase extends Sprite
 {

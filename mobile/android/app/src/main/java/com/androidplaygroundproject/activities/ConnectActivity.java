@@ -1,5 +1,5 @@
 
-package com.parrot.freeflight.activities;
+package com.androidplaygroundproject.activities;
 
 import java.util.Random;
 
@@ -20,14 +20,14 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
-import com.parrot.freeflight.R;
-import com.parrot.freeflight.activities.base.ParrotActivity;
-import com.parrot.freeflight.receivers.DroneConnectionChangeReceiverDelegate;
-import com.parrot.freeflight.receivers.DroneConnectionChangedReceiver;
-import com.parrot.freeflight.receivers.DroneReadyReceiver;
-import com.parrot.freeflight.receivers.DroneReadyReceiverDelegate;
-import com.parrot.freeflight.service.DroneControlService;
-import com.parrot.freeflight.utils.SystemUtils;
+import com.androidplaygroundproject.R;
+import com.androidplaygroundproject.activities.base.ParrotActivity;
+import com.androidplaygroundproject.receivers.DroneConnectionChangeReceiverDelegate;
+import com.androidplaygroundproject.receivers.DroneConnectionChangedReceiver;
+import com.androidplaygroundproject.receivers.DroneReadyReceiver;
+import com.androidplaygroundproject.receivers.DroneReadyReceiverDelegate;
+import com.androidplaygroundproject.service.DroneControlService;
+import com.androidplaygroundproject.utils.SystemUtils;
 
 public class ConnectActivity
         extends ParrotActivity

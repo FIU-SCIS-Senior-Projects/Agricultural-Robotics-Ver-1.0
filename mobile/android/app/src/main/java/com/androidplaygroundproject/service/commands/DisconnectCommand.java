@@ -5,17 +5,17 @@
  * Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.service.commands;
+package com.androidplaygroundproject.service.commands;
 
 import android.content.IntentFilter;
 import android.support.v4.content.LocalBroadcastManager;
 
-import com.parrot.freeflight.drone.DroneProxy;
-import com.parrot.freeflight.drone.DroneProxyConnectionFailedReceiver;
-import com.parrot.freeflight.drone.DroneProxyConnectionFailedReceiverDelegate;
-import com.parrot.freeflight.drone.DroneProxyDisconnectedReceiver;
-import com.parrot.freeflight.drone.DroneProxyDisconnectedReceiverDelegate;
-import com.parrot.freeflight.service.DroneControlService;
+import com.androidplaygroundproject.drone.DroneProxy;
+import com.androidplaygroundproject.drone.DroneProxyConnectionFailedReceiver;
+import com.androidplaygroundproject.drone.DroneProxyConnectionFailedReceiverDelegate;
+import com.androidplaygroundproject.drone.DroneProxyDisconnectedReceiver;
+import com.androidplaygroundproject.drone.DroneProxyDisconnectedReceiverDelegate;
+import com.androidplaygroundproject.service.DroneControlService;
 
 public class DisconnectCommand
         extends DroneServiceCommand

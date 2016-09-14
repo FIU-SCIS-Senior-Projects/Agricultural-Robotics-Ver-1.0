@@ -1,4 +1,4 @@
-package com.parrot.freeflight.remotecontrollers;
+package com.androidplaygroundproject.remotecontrollers;
 
 import android.view.KeyEvent;
 

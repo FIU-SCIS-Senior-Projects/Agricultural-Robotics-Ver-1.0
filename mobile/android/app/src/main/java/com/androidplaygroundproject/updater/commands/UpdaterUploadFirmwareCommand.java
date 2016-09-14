@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.updater.commands;
+package com.androidplaygroundproject.updater.commands;
 
 import java.io.File;
 
@@ -14,12 +14,12 @@ import android.content.res.AssetManager;
 import android.os.Build;
 import android.util.Log;
 
-import com.parrot.freeflight.R;
-import com.parrot.freeflight.drone.DroneConfig;
-import com.parrot.freeflight.ui.ConnectScreenViewController.IndicatorState;
-import com.parrot.freeflight.updater.UpdateManager;
-import com.parrot.freeflight.utils.CacheUtils;
-import com.parrot.freeflight.utils.TelnetUtils;
+import com.androidplaygroundproject.R;
+import com.androidplaygroundproject.drone.DroneConfig;
+import com.androidplaygroundproject.ui.ConnectScreenViewController.IndicatorState;
+import com.androidplaygroundproject.updater.UpdateManager;
+import com.androidplaygroundproject.utils.CacheUtils;
+import com.androidplaygroundproject.utils.TelnetUtils;
 import com.parrot.ftp.FTPClient;
 import com.parrot.ftp.FTPClientStatus;
 import com.parrot.ftp.FTPClientStatus.FTPStatus;

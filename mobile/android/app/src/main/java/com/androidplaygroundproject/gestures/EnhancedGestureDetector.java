@@ -1,4 +1,4 @@
-package com.parrot.freeflight.gestures;
+package com.androidplaygroundproject.gestures;
 
 import android.content.Context;
 import android.view.GestureDetector;

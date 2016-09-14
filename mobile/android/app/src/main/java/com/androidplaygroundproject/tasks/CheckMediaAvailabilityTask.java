@@ -1,10 +1,10 @@
 
-package com.parrot.freeflight.tasks;
+package com.androidplaygroundproject.tasks;
 
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.parrot.freeflight.utils.ARDroneMediaGallery;
+import com.androidplaygroundproject.utils.ARDroneMediaGallery;
 
 public class CheckMediaAvailabilityTask extends AsyncTask<Void, Void, Boolean>
 {

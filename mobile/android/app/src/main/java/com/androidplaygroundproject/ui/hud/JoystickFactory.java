@@ -5,12 +5,12 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.ui.hud;
+package com.androidplaygroundproject.ui.hud;
 
 
 import android.content.Context;
 
-import com.parrot.freeflight.ui.hud.Sprite.Align;
+import com.androidplaygroundproject.ui.hud.Sprite.Align;
 
 public class JoystickFactory 
 {

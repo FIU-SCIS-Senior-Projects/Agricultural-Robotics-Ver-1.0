@@ -1,4 +1,4 @@
-package com.parrot.freeflight.ui;
+package com.androidplaygroundproject.ui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -13,9 +13,9 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.parrot.freeflight.R;
-import com.parrot.freeflight.activities.DashboardActivity;
-import com.parrot.freeflight.utils.AnimationUtils;
+import com.androidplaygroundproject.R;
+import com.androidplaygroundproject.activities.DashboardActivity;
+import com.androidplaygroundproject.utils.AnimationUtils;
 
 public class ActionBar implements OnClickListener
 {

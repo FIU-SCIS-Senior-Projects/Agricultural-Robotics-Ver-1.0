@@ -1,4 +1,4 @@
-package com.parrot.freeflight.activities.base;
+package com.androidplaygroundproject.activities.base;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.parrot.freeflight.utils.FontUtils;
+import com.androidplaygroundproject.utils.FontUtils;
 
 @SuppressLint("Registered")
 // No need to register this activity in the manifest as this is base activity for others.

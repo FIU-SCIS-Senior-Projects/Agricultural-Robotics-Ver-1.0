@@ -1,4 +1,4 @@
-package com.parrot.freeflight.ui.adapters;
+package com.androidplaygroundproject.ui.adapters;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.parrot.freeflight.utils.FontUtils;
+import com.androidplaygroundproject.utils.FontUtils;
 
 public class InfosAdapter extends PagerAdapter 
 {

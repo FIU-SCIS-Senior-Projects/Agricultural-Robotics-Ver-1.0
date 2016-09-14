@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.ui;
+package com.androidplaygroundproject.ui;
 
 import java.util.Hashtable;
 
@@ -18,7 +18,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.parrot.freeflight.R;
+import com.androidplaygroundproject.R;
 
 public class ConnectScreenViewController 
 {	

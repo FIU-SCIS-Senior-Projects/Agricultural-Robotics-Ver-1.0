@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.utils;
+package com.androidplaygroundproject.utils;
 
 import java.io.IOException;
 import java.io.OutputStream;

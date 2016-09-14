@@ -5,11 +5,11 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.parrot.freeflight.ui.hud;
+package com.androidplaygroundproject.ui.hud;
 
 import android.content.Context;
 
-import com.parrot.freeflight.R;
+import com.androidplaygroundproject.R;
 
 public class AnalogueJoystick 
 	extends JoystickBase

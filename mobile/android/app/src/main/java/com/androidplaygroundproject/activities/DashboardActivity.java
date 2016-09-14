@@ -1,4 +1,4 @@
-package com.parrot.freeflight.activities;
+package com.androidplaygroundproject.activities;
 
 import java.io.File;
 
@@ -20,27 +20,27 @@ import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.parrot.freeflight.R;
-import com.parrot.freeflight.activities.base.DashboardActivityBase;
-import com.parrot.freeflight.receivers.DroneAvailabilityDelegate;
-import com.parrot.freeflight.receivers.DroneAvailabilityReceiver;
-import com.parrot.freeflight.receivers.DroneConnectionChangeReceiverDelegate;
-import com.parrot.freeflight.receivers.DroneConnectionChangedReceiver;
-import com.parrot.freeflight.receivers.DroneFirmwareCheckReceiver;
-import com.parrot.freeflight.receivers.DroneFirmwareCheckReceiverDelegate;
-import com.parrot.freeflight.receivers.MediaReadyDelegate;
-import com.parrot.freeflight.receivers.MediaReadyReceiver;
-import com.parrot.freeflight.receivers.NetworkChangeReceiver;
-import com.parrot.freeflight.receivers.NetworkChangeReceiverDelegate;
-import com.parrot.freeflight.service.DroneControlService;
-import com.parrot.freeflight.service.intents.DroneStateManager;
-import com.parrot.freeflight.tasks.CheckAcademyAvailabilityTask;
-import com.parrot.freeflight.tasks.CheckDroneNetworkAvailabilityTask;
-import com.parrot.freeflight.tasks.CheckFirmwareTask;
-import com.parrot.freeflight.tasks.CheckMediaAvailabilityTask;
-import com.parrot.freeflight.transcodeservice.TranscodingService;
-import com.parrot.freeflight.updater.FirmwareUpdateService;
-import com.parrot.freeflight.utils.GPSHelper;
+import com.androidplaygroundproject.R;
+import com.androidplaygroundproject.activities.base.DashboardActivityBase;
+import com.androidplaygroundproject.receivers.DroneAvailabilityDelegate;
+import com.androidplaygroundproject.receivers.DroneAvailabilityReceiver;
+import com.androidplaygroundproject.receivers.DroneConnectionChangeReceiverDelegate;
+import com.androidplaygroundproject.receivers.DroneConnectionChangedReceiver;
+import com.androidplaygroundproject.receivers.DroneFirmwareCheckReceiver;
+import com.androidplaygroundproject.receivers.DroneFirmwareCheckReceiverDelegate;
+import com.androidplaygroundproject.receivers.MediaReadyDelegate;
+import com.androidplaygroundproject.receivers.MediaReadyReceiver;
+import com.androidplaygroundproject.receivers.NetworkChangeReceiver;
+import com.androidplaygroundproject.receivers.NetworkChangeReceiverDelegate;
+import com.androidplaygroundproject.service.DroneControlService;
+import com.androidplaygroundproject.service.intents.DroneStateManager;
+import com.androidplaygroundproject.tasks.CheckAcademyAvailabilityTask;
+import com.androidplaygroundproject.tasks.CheckDroneNetworkAvailabilityTask;
+import com.androidplaygroundproject.tasks.CheckFirmwareTask;
+import com.androidplaygroundproject.tasks.CheckMediaAvailabilityTask;
+import com.androidplaygroundproject.transcodeservice.TranscodingService;
+import com.androidplaygroundproject.updater.FirmwareUpdateService;
+import com.androidplaygroundproject.utils.GPSHelper;
 
 public class DashboardActivity extends DashboardActivityBase 
 implements 

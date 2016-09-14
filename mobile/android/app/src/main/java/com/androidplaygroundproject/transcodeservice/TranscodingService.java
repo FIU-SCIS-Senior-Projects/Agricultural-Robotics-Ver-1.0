@@ -1,5 +1,5 @@
 
-package com.parrot.freeflight.transcodeservice;
+package com.androidplaygroundproject.transcodeservice;
 
 import java.io.File;
 import java.util.concurrent.ExecutionException;
@@ -12,10 +12,10 @@ import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.parrot.freeflight.tasks.MoveFileTask;
-import com.parrot.freeflight.transcodeservice.tasks.CleanupCacheFolderTask;
-import com.parrot.freeflight.utils.ARDroneMediaGallery;
-import com.parrot.freeflight.utils.FileUtils;
+import com.androidplaygroundproject.tasks.MoveFileTask;
+import com.androidplaygroundproject.transcodeservice.tasks.CleanupCacheFolderTask;
+import com.androidplaygroundproject.utils.ARDroneMediaGallery;
+import com.androidplaygroundproject.utils.FileUtils;
 
 public class TranscodingService extends Service
 {

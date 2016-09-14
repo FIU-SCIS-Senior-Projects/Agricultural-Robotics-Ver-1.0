@@ -1,6 +1,6 @@
-package com.parrot.freeflight.updater;
+package com.androidplaygroundproject.updater;
 
-import com.parrot.freeflight.ui.ConnectScreenViewController.IndicatorState;
+import com.androidplaygroundproject.ui.ConnectScreenViewController.IndicatorState;
 
 public interface UpdaterDelegate
 {

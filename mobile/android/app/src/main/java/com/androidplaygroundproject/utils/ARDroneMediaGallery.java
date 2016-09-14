@@ -1,4 +1,4 @@
-package com.parrot.freeflight.utils;
+package com.androidplaygroundproject.utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,7 +23,7 @@ import android.provider.MediaStore.Images;
 import android.provider.MediaStore.Video;
 import android.util.Log;
 
-import com.parrot.freeflight.vo.MediaVO;
+import com.androidplaygroundproject.vo.MediaVO;
 
 public class ARDroneMediaGallery
         implements MediaScannerConnectionClient

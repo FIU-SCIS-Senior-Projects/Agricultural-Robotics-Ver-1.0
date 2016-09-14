@@ -6,7 +6,7 @@
  */
 
 
-package com.parrot.freeflight.updater.utils;
+package com.androidplaygroundproject.updater.utils;
 
 import java.io.IOException;
 import java.io.InputStream;

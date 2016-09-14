@@ -1,4 +1,4 @@
-package com.parrot.freeflight.ui.adapters;
+package com.androidplaygroundproject.ui.adapters;
 
 import java.util.List;
 

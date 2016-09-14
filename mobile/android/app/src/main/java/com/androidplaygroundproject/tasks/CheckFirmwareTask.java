@@ -1,4 +1,4 @@
-package com.parrot.freeflight.tasks;
+package com.androidplaygroundproject.tasks;
 
 import java.io.IOException;
 
@@ -8,10 +8,10 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.parrot.freeflight.drone.DroneConfig;
-import com.parrot.freeflight.updater.utils.FirmwareConfig;
-import com.parrot.freeflight.utils.FTPUtils;
-import com.parrot.freeflight.utils.Version;
+import com.androidplaygroundproject.drone.DroneConfig;
+import com.androidplaygroundproject.updater.utils.FirmwareConfig;
+import com.androidplaygroundproject.utils.FTPUtils;
+import com.androidplaygroundproject.utils.Version;
 
 public class CheckFirmwareTask extends AsyncTask<Object, Integer, Boolean> 
 {

@@ -1,4 +1,4 @@
-package com.parrot.freeflight.ui;
+package com.androidplaygroundproject.ui;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Matrix;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.parrot.freeflight.R;
+import com.androidplaygroundproject.R;
 
 public class ImageStickView
         extends ViewGroup

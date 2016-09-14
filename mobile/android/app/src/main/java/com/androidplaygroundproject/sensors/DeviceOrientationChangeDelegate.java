@@ -1,4 +1,4 @@
-package com.parrot.freeflight.sensors;
+package com.androidplaygroundproject.sensors;
 
 public interface DeviceOrientationChangeDelegate
 {

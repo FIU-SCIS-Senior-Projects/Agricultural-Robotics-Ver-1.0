@@ -1,4 +1,4 @@
-package com.parrot.freeflight.utils;
+package com.androidplaygroundproject.utils;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
