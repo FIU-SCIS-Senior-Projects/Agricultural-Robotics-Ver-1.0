@@ -4,7 +4,8 @@
   "description": "Extensible remote-control environment for the AR Drone.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "replay-recent": "ffplay -f h264 tmp/$(ls -t -- *tmp | head -n 1)/*.h264"
   },
   "repository": {
     "type": "git",
