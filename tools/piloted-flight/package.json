@@ -3,6 +3,9 @@
   "version": "0.1.1",
   "description": "Extensible remote-control environment for the AR Drone.",
   "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:eschnou/ardrone-webflight.git"

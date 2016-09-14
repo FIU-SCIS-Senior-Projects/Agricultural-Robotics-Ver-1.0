@@ -52,3 +52,11 @@ bower_components
 _site
 pictures
 temp.js
+
+# Piloted Flight Tool
+
+tools/piloted-flight/tmp
+
+# Scripted Flight Tool
+
+# Something will go here eventually
