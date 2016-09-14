@@ -13,6 +13,7 @@ PILOT_ACCELERATION = 0.04;
           , flip     = 'f'
           , channel  = 'c'
           ;
+          /*
         if      (options && options.keyboard === 'qwerty') { }
         else if (options && options.keyboard === 'azerty') {
           forward  = 'z';
@@ -20,6 +21,8 @@ PILOT_ACCELERATION = 0.04;
           left     = 'q';
           right    = 'd';
         }
+        */
+
 
         // Static keymap used within this module
         var Keymap = {
