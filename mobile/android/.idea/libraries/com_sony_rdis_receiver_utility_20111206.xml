@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.sony.rdis.receiver.utility-20111206">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/com.sony.rdis.receiver.utility-20111206.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
