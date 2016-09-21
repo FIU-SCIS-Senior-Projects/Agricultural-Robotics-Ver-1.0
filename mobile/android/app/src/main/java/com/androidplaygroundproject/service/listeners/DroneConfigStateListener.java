@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.service.listeners;
+package com.parrot.freeflight.service.listeners;
 
 public interface DroneConfigStateListener 
 {

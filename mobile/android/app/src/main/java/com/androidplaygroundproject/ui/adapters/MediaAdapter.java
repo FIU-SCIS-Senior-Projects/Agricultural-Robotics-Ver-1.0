@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.ui.adapters;
+package com.parrot.freeflight.ui.adapters;
 
 import java.util.HashSet;
 import java.util.List;
@@ -17,10 +17,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.androidplaygroundproject.R;
-import com.androidplaygroundproject.tasks.MediaThumbnailExecutorManager;
-import com.androidplaygroundproject.tasks.ThumbnailWorkerTaskDelegate;
-import com.androidplaygroundproject.vo.MediaVO;
+import com.parrot.freeflight.R;
+import com.parrot.freeflight.tasks.MediaThumbnailExecutorManager;
+import com.parrot.freeflight.tasks.ThumbnailWorkerTaskDelegate;
+import com.parrot.freeflight.vo.MediaVO;
 
 public class MediaAdapter
         extends BaseAdapter

@@ -1,5 +1,5 @@
 
-package com.androidplaygroundproject.activities;
+package com.parrot.freeflight.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.androidplaygroundproject.R;
-import com.androidplaygroundproject.utils.FontUtils;
+import com.parrot.freeflight.R;
+import com.parrot.freeflight.utils.FontUtils;
 
 public class WarningDialog extends DialogFragment
         implements OnClickListener

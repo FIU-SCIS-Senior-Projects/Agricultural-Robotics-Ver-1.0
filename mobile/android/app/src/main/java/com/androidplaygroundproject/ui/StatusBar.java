@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.ui;
+package com.parrot.freeflight.ui;
 
 import java.util.Date;
 
@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.androidplaygroundproject.R;
+import com.parrot.freeflight.R;
 
 public final class StatusBar
 {

@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.tasks;
+package com.parrot.freeflight.tasks;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,8 +9,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.androidplaygroundproject.drone.DroneConfig;
-import com.androidplaygroundproject.utils.CacheUtils;
+import com.parrot.freeflight.drone.DroneConfig;
+import com.parrot.freeflight.utils.CacheUtils;
 import com.parrot.ftp.FTPClient;
 
 public class CheckDroneNetworkAvailabilityTask extends AsyncTask<Context, Integer, Boolean> {

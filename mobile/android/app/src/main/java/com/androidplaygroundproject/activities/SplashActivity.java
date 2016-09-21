@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.activities;
+package com.parrot.freeflight.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -26,9 +26,9 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.VideoView;
 
-import com.androidplaygroundproject.R;
-import com.androidplaygroundproject.activities.base.ParrotActivity;
-import com.androidplaygroundproject.utils.DeviceCapabilitiesUtils;
+import com.parrot.freeflight.R;
+import com.parrot.freeflight.activities.base.ParrotActivity;
+import com.parrot.freeflight.utils.DeviceCapabilitiesUtils;
 
 public class SplashActivity
         extends ParrotActivity

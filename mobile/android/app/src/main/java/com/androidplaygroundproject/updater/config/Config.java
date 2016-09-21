@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.updater.config;
+package com.parrot.freeflight.updater.config;
 
 import java.io.IOException;
 
@@ -16,7 +16,7 @@ import android.content.Context;
 import android.content.res.XmlResourceParser;
 import android.util.Log;
 
-import com.androidplaygroundproject.R;
+import com.parrot.freeflight.R;
 
 public class Config 
 {

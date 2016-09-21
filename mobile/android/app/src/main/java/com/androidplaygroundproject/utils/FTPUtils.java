@@ -6,7 +6,7 @@
  */
 
 
-package com.androidplaygroundproject.utils;
+package com.parrot.freeflight.utils;
 
 import java.io.File;
 

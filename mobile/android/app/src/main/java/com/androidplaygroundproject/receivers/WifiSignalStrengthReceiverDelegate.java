@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.receivers;
+package com.parrot.freeflight.receivers;
 
 public interface WifiSignalStrengthReceiverDelegate 
 {

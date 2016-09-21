@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.video;
+package com.parrot.freeflight.video;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -22,8 +22,8 @@ import android.opengl.GLSurfaceView.Renderer;
 import android.opengl.Matrix;
 import android.util.Log;
 
-import com.androidplaygroundproject.ui.gl.GLBGVideoSprite;
-import com.androidplaygroundproject.ui.hud.Sprite;
+import com.parrot.freeflight.ui.gl.GLBGVideoSprite;
+import com.parrot.freeflight.ui.hud.Sprite;
 
 public class VideoStageRenderer implements Renderer {
 

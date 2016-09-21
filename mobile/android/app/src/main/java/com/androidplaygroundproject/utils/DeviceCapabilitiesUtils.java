@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.utils;
+package com.parrot.freeflight.utils;
 
 import android.app.Activity;
 import android.media.CamcorderProfile;
@@ -6,7 +6,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
 
-import com.androidplaygroundproject.drone.DroneProxy.EVideoRecorderCapability;
+import com.parrot.freeflight.drone.DroneProxy.EVideoRecorderCapability;
 
 public class DeviceCapabilitiesUtils {
 

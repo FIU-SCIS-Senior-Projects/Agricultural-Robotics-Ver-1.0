@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.tasks;
+package com.parrot.freeflight.tasks;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -12,9 +12,9 @@ import android.provider.MediaStore.Video.Thumbnails;
 import android.util.Log;
 import android.widget.ImageView;
 
-import com.androidplaygroundproject.utils.ImageUtils;
-import com.androidplaygroundproject.utils.ThumbnailUtils;
-import com.androidplaygroundproject.vo.MediaVO;
+import com.parrot.freeflight.utils.ImageUtils;
+import com.parrot.freeflight.utils.ThumbnailUtils;
+import com.parrot.freeflight.vo.MediaVO;
 
 public class MediaThumbnailExecutorManager
 {

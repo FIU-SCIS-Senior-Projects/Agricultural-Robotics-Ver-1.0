@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.tasks;
+package com.parrot.freeflight.tasks;
 
 import java.io.File;
 import java.io.FileInputStream;

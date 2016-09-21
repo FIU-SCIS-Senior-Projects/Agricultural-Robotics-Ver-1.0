@@ -5,7 +5,7 @@
  * Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.ui.gl;
+package com.parrot.freeflight.ui.gl;
 
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
@@ -28,7 +28,7 @@ import android.opengl.Matrix;
 import android.os.Build;
 import android.util.Log;
 
-import com.androidplaygroundproject.utils.TextureUtils;
+import com.parrot.freeflight.utils.TextureUtils;
 
 public class GLSprite
 {

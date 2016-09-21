@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.androidplaygroundproject.debug;
+package com.parrot.freeflight.debug;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

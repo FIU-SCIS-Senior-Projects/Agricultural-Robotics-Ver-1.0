@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.activities;
+package com.parrot.freeflight.activities;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -10,17 +10,17 @@ import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
 import android.view.View;
 
-import com.androidplaygroundproject.R;
-import com.androidplaygroundproject.activities.base.ParrotActivity;
-import com.androidplaygroundproject.service.DroneControlService;
-import com.androidplaygroundproject.ui.ConnectScreenViewController;
-import com.androidplaygroundproject.ui.ConnectScreenViewController.IndicatorState;
-import com.androidplaygroundproject.ui.StatusBar;
-import com.androidplaygroundproject.updater.FirmwareUpdateService;
-import com.androidplaygroundproject.updater.FirmwareUpdateService.ECommand;
-import com.androidplaygroundproject.updater.FirmwareUpdateService.ECommandResult;
-import com.androidplaygroundproject.updater.receivers.FirmwareUpdateServiceReceiver;
-import com.androidplaygroundproject.updater.receivers.FirmwareUpdateServiceReceiverDelegate;
+import com.parrot.freeflight.R;
+import com.parrot.freeflight.activities.base.ParrotActivity;
+import com.parrot.freeflight.service.DroneControlService;
+import com.parrot.freeflight.ui.ConnectScreenViewController;
+import com.parrot.freeflight.ui.ConnectScreenViewController.IndicatorState;
+import com.parrot.freeflight.ui.StatusBar;
+import com.parrot.freeflight.updater.FirmwareUpdateService;
+import com.parrot.freeflight.updater.FirmwareUpdateService.ECommand;
+import com.parrot.freeflight.updater.FirmwareUpdateService.ECommandResult;
+import com.parrot.freeflight.updater.receivers.FirmwareUpdateServiceReceiver;
+import com.parrot.freeflight.updater.receivers.FirmwareUpdateServiceReceiverDelegate;
 
 public class UpdateFirmwareActivity extends ParrotActivity 
 implements ServiceConnection,

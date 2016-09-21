@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.receivers;
+package com.parrot.freeflight.receivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

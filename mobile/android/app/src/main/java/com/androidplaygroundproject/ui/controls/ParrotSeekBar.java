@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.ui.controls;
+package com.parrot.freeflight.ui.controls;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -12,7 +12,7 @@ import android.widget.SeekBar;
 import android.widget.TableLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.androidplaygroundproject.R;
+import com.parrot.freeflight.R;
 
 public class ParrotSeekBar extends SeekBar {
 	

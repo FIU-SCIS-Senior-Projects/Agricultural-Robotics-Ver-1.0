@@ -5,9 +5,9 @@
  * Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.service.commands;
+package com.parrot.freeflight.service.commands;
 
-import com.androidplaygroundproject.service.DroneControlService;
+import com.parrot.freeflight.service.DroneControlService;
 
 public abstract class DroneServiceCommand
 {

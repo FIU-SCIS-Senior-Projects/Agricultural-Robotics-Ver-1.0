@@ -1,5 +1,5 @@
 
-package com.androidplaygroundproject.activities;
+package com.parrot.freeflight.activities;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -25,21 +25,21 @@ import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
-import com.androidplaygroundproject.R;
-import com.androidplaygroundproject.activities.base.ParrotActivity;
-import com.androidplaygroundproject.receivers.MediaReadyDelegate;
-import com.androidplaygroundproject.receivers.MediaReadyReceiver;
-import com.androidplaygroundproject.receivers.MediaStorageReceiver;
-import com.androidplaygroundproject.receivers.MediaStorageReceiverDelegate;
-import com.androidplaygroundproject.service.DroneControlService;
-import com.androidplaygroundproject.tasks.GetMediaObjectsListTask;
-import com.androidplaygroundproject.tasks.GetMediaObjectsListTask.MediaFilter;
-import com.androidplaygroundproject.transcodeservice.TranscodingService;
-import com.androidplaygroundproject.ui.ActionBar;
-import com.androidplaygroundproject.ui.StatusBar;
-import com.androidplaygroundproject.ui.adapters.MediaAdapter;
-import com.androidplaygroundproject.utils.ARDroneMediaGallery;
-import com.androidplaygroundproject.vo.MediaVO;
+import com.parrot.freeflight.R;
+import com.parrot.freeflight.activities.base.ParrotActivity;
+import com.parrot.freeflight.receivers.MediaReadyDelegate;
+import com.parrot.freeflight.receivers.MediaReadyReceiver;
+import com.parrot.freeflight.receivers.MediaStorageReceiver;
+import com.parrot.freeflight.receivers.MediaStorageReceiverDelegate;
+import com.parrot.freeflight.service.DroneControlService;
+import com.parrot.freeflight.tasks.GetMediaObjectsListTask;
+import com.parrot.freeflight.tasks.GetMediaObjectsListTask.MediaFilter;
+import com.parrot.freeflight.transcodeservice.TranscodingService;
+import com.parrot.freeflight.ui.ActionBar;
+import com.parrot.freeflight.ui.StatusBar;
+import com.parrot.freeflight.ui.adapters.MediaAdapter;
+import com.parrot.freeflight.utils.ARDroneMediaGallery;
+import com.parrot.freeflight.vo.MediaVO;
 
 public class MediaActivity extends ParrotActivity
         implements

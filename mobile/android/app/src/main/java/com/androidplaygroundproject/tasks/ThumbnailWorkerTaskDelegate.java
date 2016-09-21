@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.tasks;
+package com.parrot.freeflight.tasks;
 
 import android.graphics.drawable.BitmapDrawable;
 import android.widget.ImageView;

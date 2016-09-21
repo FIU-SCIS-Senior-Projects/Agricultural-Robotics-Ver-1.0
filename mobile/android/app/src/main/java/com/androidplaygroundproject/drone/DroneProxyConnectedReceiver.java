@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.drone;
+package com.parrot.freeflight.drone;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.service.intents;
+package com.parrot.freeflight.service.intents;
 
 public class DroneStateManager 
 {

@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.service;
+package com.parrot.freeflight.service;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,23 +28,23 @@ import android.os.PowerManager.WakeLock;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.androidplaygroundproject.drone.DroneAcademyMediaListener;
-import com.androidplaygroundproject.drone.DroneConfig;
-import com.androidplaygroundproject.drone.DroneConfig.EDroneVersion;
-import com.androidplaygroundproject.drone.DroneProxy;
-import com.androidplaygroundproject.drone.DroneProxy.DroneProgressiveCommandFlag;
-import com.androidplaygroundproject.drone.NavData;
-import com.androidplaygroundproject.service.commands.DroneServiceCommand;
-import com.androidplaygroundproject.service.intents.DroneStateManager;
-import com.androidplaygroundproject.service.listeners.DroneDebugListener;
-import com.androidplaygroundproject.service.states.ConnectedServiceState;
-import com.androidplaygroundproject.service.states.DisconnectedServiceState;
-import com.androidplaygroundproject.service.states.PausedServiceState;
-import com.androidplaygroundproject.tasks.MoveFileTask;
-import com.androidplaygroundproject.utils.ARDroneMediaGallery;
-import com.androidplaygroundproject.utils.FTPUtils;
-import com.androidplaygroundproject.utils.FileUtils;
-import com.androidplaygroundproject.utils.GPSHelper;
+import com.parrot.freeflight.drone.DroneAcademyMediaListener;
+import com.parrot.freeflight.drone.DroneConfig;
+import com.parrot.freeflight.drone.DroneConfig.EDroneVersion;
+import com.parrot.freeflight.drone.DroneProxy;
+import com.parrot.freeflight.drone.DroneProxy.DroneProgressiveCommandFlag;
+import com.parrot.freeflight.drone.NavData;
+import com.parrot.freeflight.service.commands.DroneServiceCommand;
+import com.parrot.freeflight.service.intents.DroneStateManager;
+import com.parrot.freeflight.service.listeners.DroneDebugListener;
+import com.parrot.freeflight.service.states.ConnectedServiceState;
+import com.parrot.freeflight.service.states.DisconnectedServiceState;
+import com.parrot.freeflight.service.states.PausedServiceState;
+import com.parrot.freeflight.tasks.MoveFileTask;
+import com.parrot.freeflight.utils.ARDroneMediaGallery;
+import com.parrot.freeflight.utils.FTPUtils;
+import com.parrot.freeflight.utils.FileUtils;
+import com.parrot.freeflight.utils.GPSHelper;
 
 public class DroneControlService extends Service 
 implements 

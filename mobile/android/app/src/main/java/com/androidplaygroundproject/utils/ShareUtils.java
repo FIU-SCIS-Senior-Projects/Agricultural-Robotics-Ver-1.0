@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.utils;
+package com.parrot.freeflight.utils;
 
 import java.io.File;
 
@@ -11,7 +11,7 @@ import android.provider.MediaStore.Images;
 import android.provider.MediaStore.Video;
 import android.util.Log;
 
-import com.androidplaygroundproject.R;
+import com.parrot.freeflight.R;
 
 public final class ShareUtils
 {

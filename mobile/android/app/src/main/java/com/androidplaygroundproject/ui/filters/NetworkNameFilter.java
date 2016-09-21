@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.ui.filters;
+package com.parrot.freeflight.ui.filters;
 
 import android.text.InputFilter;
 import android.text.Spanned;

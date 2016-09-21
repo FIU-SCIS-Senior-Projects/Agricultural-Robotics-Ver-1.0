@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.utils;
+package com.parrot.freeflight.utils;
 
 import java.io.IOException;
 
@@ -10,7 +10,7 @@ import android.content.Context;
 import android.os.Looper;
 import android.util.Log;
 
-import com.androidplaygroundproject.R;
+import com.parrot.freeflight.R;
 
 public final class InternetUtils
 {

@@ -1,10 +1,10 @@
-package com.androidplaygroundproject.receivers;
+package com.parrot.freeflight.receivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.androidplaygroundproject.service.DroneControlService;
+import com.parrot.freeflight.service.DroneControlService;
 
 public class DroneCameraReadyChangeReceiver extends BroadcastReceiver
 {

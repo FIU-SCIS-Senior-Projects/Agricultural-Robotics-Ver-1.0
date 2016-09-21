@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.receivers;
+package com.parrot.freeflight.receivers;
 
 import java.io.File;
 
@@ -6,8 +6,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.androidplaygroundproject.service.DroneControlService;
-import com.androidplaygroundproject.transcodeservice.TranscodingService;
+import com.parrot.freeflight.service.DroneControlService;
+import com.parrot.freeflight.transcodeservice.TranscodingService;
 
 public class MediaReadyReceiver extends BroadcastReceiver
 {

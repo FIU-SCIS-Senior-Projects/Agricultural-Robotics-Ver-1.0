@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.drone;
+package com.parrot.freeflight.drone;
 
 import java.io.File;
 
@@ -16,8 +16,8 @@ import android.provider.Settings.Secure;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.androidplaygroundproject.settings.ApplicationSettings;
-import com.androidplaygroundproject.utils.FileUtils;
+import com.parrot.freeflight.settings.ApplicationSettings;
+import com.parrot.freeflight.utils.FileUtils;
 
 public class DroneProxy 
 {

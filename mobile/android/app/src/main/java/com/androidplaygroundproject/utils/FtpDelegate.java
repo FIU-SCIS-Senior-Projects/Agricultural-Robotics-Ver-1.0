@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.utils;
+package com.parrot.freeflight.utils;
 
 public interface FtpDelegate 
 {

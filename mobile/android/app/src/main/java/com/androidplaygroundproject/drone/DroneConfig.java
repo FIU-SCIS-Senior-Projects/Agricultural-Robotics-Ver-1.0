@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.drone;
+package com.parrot.freeflight.drone;
 
 public class DroneConfig 
 {

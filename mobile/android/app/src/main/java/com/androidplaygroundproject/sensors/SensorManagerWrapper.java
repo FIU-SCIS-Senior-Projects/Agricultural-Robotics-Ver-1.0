@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.sensors;
+package com.parrot.freeflight.sensors;
 
 import android.hardware.SensorEventListener;
 import android.os.Handler;

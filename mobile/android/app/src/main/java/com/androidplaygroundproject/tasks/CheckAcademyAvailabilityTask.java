@@ -1,5 +1,5 @@
 
-package com.androidplaygroundproject.tasks;
+package com.parrot.freeflight.tasks;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.androidplaygroundproject.R;
+import com.parrot.freeflight.R;
 
 public class CheckAcademyAvailabilityTask extends AsyncTask<Context, Integer, Boolean>
 {

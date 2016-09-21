@@ -5,11 +5,11 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.updater;
+package com.parrot.freeflight.updater;
 
 import android.content.Context;
 
-import com.androidplaygroundproject.service.listeners.DroneUpdaterListener.ArDroneToolError;
+import com.parrot.freeflight.service.listeners.DroneUpdaterListener.ArDroneToolError;
 
 public interface UpdaterCommand 
 {

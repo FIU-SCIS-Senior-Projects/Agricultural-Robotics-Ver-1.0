@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.video;
+package com.parrot.freeflight.video;
 
 import android.content.Context;
 import android.graphics.Canvas;

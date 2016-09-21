@@ -1,13 +1,13 @@
-package com.androidplaygroundproject.updater.receivers;
+package com.parrot.freeflight.updater.receivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.androidplaygroundproject.updater.FirmwareUpdateService;
-import com.androidplaygroundproject.updater.FirmwareUpdateService.ECommand;
-import com.androidplaygroundproject.updater.FirmwareUpdateService.ECommandResult;
+import com.parrot.freeflight.updater.FirmwareUpdateService;
+import com.parrot.freeflight.updater.FirmwareUpdateService.ECommand;
+import com.parrot.freeflight.updater.FirmwareUpdateService.ECommandResult;
 
 public class FirmwareUpdateServiceReceiver extends BroadcastReceiver
 {

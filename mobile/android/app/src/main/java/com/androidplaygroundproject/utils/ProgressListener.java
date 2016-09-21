@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.utils;
+package com.parrot.freeflight.utils;
 
 public interface ProgressListener 
 {

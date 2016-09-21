@@ -5,10 +5,10 @@
  * Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.service.commands;
+package com.parrot.freeflight.service.commands;
 
-import com.androidplaygroundproject.drone.DroneProxy;
-import com.androidplaygroundproject.service.DroneControlService;
+import com.parrot.freeflight.drone.DroneProxy;
+import com.parrot.freeflight.service.DroneControlService;
 
 public class PauseCommand extends DroneServiceCommand
 {

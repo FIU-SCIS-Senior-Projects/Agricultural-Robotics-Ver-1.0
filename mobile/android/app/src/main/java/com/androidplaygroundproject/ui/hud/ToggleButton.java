@@ -1,11 +1,11 @@
-package com.androidplaygroundproject.ui.hud;
+package com.parrot.freeflight.ui.hud;
 
 import javax.microedition.khronos.opengles.GL10;
 
 import android.content.res.Resources;
 import android.graphics.Canvas;
 
-import com.androidplaygroundproject.ui.gl.GLSprite;
+import com.parrot.freeflight.ui.gl.GLSprite;
 
 public class ToggleButton extends Button
 {

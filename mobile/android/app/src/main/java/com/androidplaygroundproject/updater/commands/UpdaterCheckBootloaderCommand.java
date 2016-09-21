@@ -5,15 +5,15 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.updater.commands;
+package com.parrot.freeflight.updater.commands;
 
 import android.content.Context;
 
-import com.androidplaygroundproject.R;
-import com.androidplaygroundproject.service.listeners.DroneUpdaterListener.ArDroneToolError;
-import com.androidplaygroundproject.ui.ConnectScreenViewController.IndicatorState;
-import com.androidplaygroundproject.updater.UpdateManager;
-import com.androidplaygroundproject.utils.Version;
+import com.parrot.freeflight.R;
+import com.parrot.freeflight.service.listeners.DroneUpdaterListener.ArDroneToolError;
+import com.parrot.freeflight.ui.ConnectScreenViewController.IndicatorState;
+import com.parrot.freeflight.updater.UpdateManager;
+import com.parrot.freeflight.utils.Version;
 
 public class UpdaterCheckBootloaderCommand extends UpdaterCommandBase 
 {

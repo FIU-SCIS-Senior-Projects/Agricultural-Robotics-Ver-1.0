@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.ui.interfaces;
+package com.parrot.freeflight.ui.interfaces;
 
 import android.view.View;
 

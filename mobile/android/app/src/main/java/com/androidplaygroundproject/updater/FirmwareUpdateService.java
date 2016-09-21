@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.updater;
+package com.parrot.freeflight.updater;
 
 import android.app.Service;
 import android.content.ComponentName;
@@ -10,7 +10,7 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
 
-import com.androidplaygroundproject.ui.ConnectScreenViewController.IndicatorState;
+import com.parrot.freeflight.ui.ConnectScreenViewController.IndicatorState;
 
 public class FirmwareUpdateService extends Service
 implements UpdaterDelegate

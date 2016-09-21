@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.activities.base;
+package com.parrot.freeflight.activities.base;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -12,10 +12,10 @@ import android.view.ViewGroup;
 import android.widget.CheckedTextView;
 import android.widget.TextView;
 
-import com.androidplaygroundproject.R;
-import com.androidplaygroundproject.receivers.MediaStorageReceiver;
-import com.androidplaygroundproject.receivers.MediaStorageReceiverDelegate;
-import com.androidplaygroundproject.ui.StatusBar;
+import com.parrot.freeflight.R;
+import com.parrot.freeflight.receivers.MediaStorageReceiver;
+import com.parrot.freeflight.receivers.MediaStorageReceiverDelegate;
+import com.parrot.freeflight.ui.StatusBar;
 
 @SuppressLint("Registered")
 // There is no need to register this activity in the manifest as this is a base activity for others.

@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.tasks;
+package com.parrot.freeflight.tasks;
 
 import android.content.ContentResolver;
 import android.content.res.Resources;
@@ -10,9 +10,9 @@ import android.provider.MediaStore;
 import android.provider.MediaStore.Video.Thumbnails;
 import android.widget.ImageView;
 
-import com.androidplaygroundproject.utils.ImageUtils;
-import com.androidplaygroundproject.utils.ThumbnailUtils;
-import com.androidplaygroundproject.vo.MediaVO;
+import com.parrot.freeflight.utils.ImageUtils;
+import com.parrot.freeflight.utils.ThumbnailUtils;
+import com.parrot.freeflight.vo.MediaVO;
 
 public class LoadMediaThumbTask
         extends AsyncTask<Void, Void, Drawable>

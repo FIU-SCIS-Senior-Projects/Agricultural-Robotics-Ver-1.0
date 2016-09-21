@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.ui.hud;
+package com.parrot.freeflight.ui.hud;
 
 public abstract class JoystickListener 
 {

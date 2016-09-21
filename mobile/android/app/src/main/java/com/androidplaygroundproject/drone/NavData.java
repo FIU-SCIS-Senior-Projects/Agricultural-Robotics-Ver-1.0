@@ -5,7 +5,7 @@
  *      Author: Dmytro Baryskyy
  */
 
-package com.androidplaygroundproject.drone;
+package com.parrot.freeflight.drone;
 
 
 public class NavData 
@@ -53,6 +53,7 @@ public class NavData
 		cameraReady = false;
 		recordReady = false;
 	}
+
 
 	public void copyFrom(NavData navData) 
 	{

@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.ui.hud;
+package com.parrot.freeflight.ui.hud;
 
 import javax.microedition.khronos.opengles.GL10;
 

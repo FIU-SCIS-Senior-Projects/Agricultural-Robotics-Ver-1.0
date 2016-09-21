@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.remotecontrollers;
+package com.parrot.freeflight.remotecontrollers;
 
 import android.R.color;
 import android.app.Activity;

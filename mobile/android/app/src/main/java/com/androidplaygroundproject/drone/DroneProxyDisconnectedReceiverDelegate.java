@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.drone;
+package com.parrot.freeflight.drone;
 
 public interface DroneProxyDisconnectedReceiverDelegate
 {

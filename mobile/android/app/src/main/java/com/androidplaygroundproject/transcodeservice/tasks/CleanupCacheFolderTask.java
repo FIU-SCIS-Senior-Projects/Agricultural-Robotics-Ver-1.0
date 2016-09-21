@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.transcodeservice.tasks;
+package com.parrot.freeflight.transcodeservice.tasks;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -8,7 +8,7 @@ import java.util.List;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.androidplaygroundproject.utils.FileUtils;
+import com.parrot.freeflight.utils.FileUtils;
 
 public class CleanupCacheFolderTask extends AsyncTask<File, Integer, Boolean>
 {

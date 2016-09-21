@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.activities;
+package com.parrot.freeflight.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -14,8 +14,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.androidplaygroundproject.R;
-import com.androidplaygroundproject.activities.base.ParrotActivity;
+import com.parrot.freeflight.R;
+import com.parrot.freeflight.activities.base.ParrotActivity;
 
 public class BrowserActivity extends ParrotActivity implements OnClickListener
 {

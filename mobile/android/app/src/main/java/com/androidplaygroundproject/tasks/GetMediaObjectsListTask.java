@@ -1,5 +1,5 @@
 
-package com.androidplaygroundproject.tasks;
+package com.parrot.freeflight.tasks;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,8 +9,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.androidplaygroundproject.utils.ARDroneMediaGallery;
-import com.androidplaygroundproject.vo.MediaVO;
+import com.parrot.freeflight.utils.ARDroneMediaGallery;
+import com.parrot.freeflight.vo.MediaVO;
 
 public class GetMediaObjectsListTask
         extends AsyncTask<Void, Void, List<MediaVO>>

@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.utils;
+package com.parrot.freeflight.utils;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.androidplaygroundproject.ui.controls.ParrotSeekBar;
+import com.parrot.freeflight.ui.controls.ParrotSeekBar;
 
 public class FontUtils 
 {

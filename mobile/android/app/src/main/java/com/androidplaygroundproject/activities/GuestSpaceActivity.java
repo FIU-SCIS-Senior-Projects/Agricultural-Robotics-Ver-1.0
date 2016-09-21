@@ -1,4 +1,4 @@
-package com.androidplaygroundproject.activities;
+package com.parrot.freeflight.activities;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -27,12 +27,12 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 
-import com.androidplaygroundproject.R;
-import com.androidplaygroundproject.activities.base.ParrotActivity;
-import com.androidplaygroundproject.ui.ActionBar;
-import com.androidplaygroundproject.ui.StatusBar;
-import com.androidplaygroundproject.ui.adapters.InfosAdapter;
-import com.androidplaygroundproject.utils.NookUtils;
+import com.parrot.freeflight.R;
+import com.parrot.freeflight.activities.base.ParrotActivity;
+import com.parrot.freeflight.ui.ActionBar;
+import com.parrot.freeflight.ui.StatusBar;
+import com.parrot.freeflight.ui.adapters.InfosAdapter;
+import com.parrot.freeflight.utils.NookUtils;
 
 @SuppressLint("NewApi")
 public class GuestSpaceActivity extends ParrotActivity 

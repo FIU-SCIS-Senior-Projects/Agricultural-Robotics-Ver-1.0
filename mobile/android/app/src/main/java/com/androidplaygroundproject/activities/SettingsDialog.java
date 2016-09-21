@@ -1,5 +1,5 @@
 
-package com.androidplaygroundproject.activities;
+package com.parrot.freeflight.activities;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -27,20 +27,20 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
-import com.androidplaygroundproject.FreeFlightApplication;
-import com.androidplaygroundproject.R;
-import com.androidplaygroundproject.drone.DroneConfig;
-import com.androidplaygroundproject.drone.DroneConfig.EDroneVersion;
-import com.androidplaygroundproject.receivers.DroneConfigChangedReceiver;
-import com.androidplaygroundproject.receivers.DroneConfigChangedReceiverDelegate;
-import com.androidplaygroundproject.service.DroneControlService;
-import com.androidplaygroundproject.settings.ApplicationSettings;
-import com.androidplaygroundproject.settings.ApplicationSettings.ControlMode;
-import com.androidplaygroundproject.settings.ApplicationSettings.EAppSettingProperty;
-import com.androidplaygroundproject.ui.SettingsDialogDelegate;
-import com.androidplaygroundproject.ui.SettingsViewController;
-import com.androidplaygroundproject.ui.listeners.OnSeekChangedListener;
-import com.androidplaygroundproject.utils.FontUtils;
+import com.parrot.freeflight.FreeFlightApplication;
+import com.parrot.freeflight.R;
+import com.parrot.freeflight.drone.DroneConfig;
+import com.parrot.freeflight.drone.DroneConfig.EDroneVersion;
+import com.parrot.freeflight.receivers.DroneConfigChangedReceiver;
+import com.parrot.freeflight.receivers.DroneConfigChangedReceiverDelegate;
+import com.parrot.freeflight.service.DroneControlService;
+import com.parrot.freeflight.settings.ApplicationSettings;
+import com.parrot.freeflight.settings.ApplicationSettings.ControlMode;
+import com.parrot.freeflight.settings.ApplicationSettings.EAppSettingProperty;
+import com.parrot.freeflight.ui.SettingsDialogDelegate;
+import com.parrot.freeflight.ui.SettingsViewController;
+import com.parrot.freeflight.ui.listeners.OnSeekChangedListener;
+import com.parrot.freeflight.utils.FontUtils;
 
 public class SettingsDialog extends DialogFragment
         implements
