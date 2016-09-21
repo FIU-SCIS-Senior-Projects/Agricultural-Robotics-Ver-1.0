@@ -144,7 +144,7 @@ LocationListener
 		workerThreadLock = new Object();
 		navdataThreadLock = new Object();
 
-		 droneProxy = DroneProxy.getInstance(getApplicationContext());
+		droneProxy = DroneProxy.getInstance(getApplicationContext());
 		//Preventing device from sleep
 		PowerManager service = (PowerManager) getSystemService(POWER_SERVICE);
 		wakeLock = service.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "DimWakeLock");
