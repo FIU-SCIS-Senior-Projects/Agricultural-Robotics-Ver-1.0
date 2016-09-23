@@ -53,11 +53,6 @@
         android:layout_alignLeft="@+id/editNetworkName"
         android:layout_below="@+id/editNetworkName" android:layout_marginTop="@dimen/settings_vertical_gap"
         android:textSize="@dimen/settings_text_small_size"
-                
-        app:lowerBoundText="0"
-        app:upperBoundText="100"   
-    	app:lowerValuePaddingLeft="@dimen/settings_seek_bounds_value_padding"
-    	app:upperValuePaddingRight="@dimen/settings_seek_bounds_value_padding"
         android:layout_marginRight="@dimen/settings_pager_button_width"/>
 
     <TextView

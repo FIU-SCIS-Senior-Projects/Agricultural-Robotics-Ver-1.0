@@ -1,22 +1,25 @@
 {
-  "name": "AndroidPlaygroundProject",
-  "version": "0.0.1",
-  "private": true,
+  "name": "ardrone-sdk-android",
+  "version": "1.0.0",
+  "description": "Parrot's official AR.Drone SDK 2.0.1, now up-to-date to work with Android Studio.",
+  "main": "index.js",
   "scripts": {
-    "build": "(cd android/ && ./gradlew assembleDebug)",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "bundle-android": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/",
-    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+    "bundle-android": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FIU-SCIS-Senior-Projects/Agricultural-Robotics-Ver-1.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FIU-SCIS-Senior-Projects/Agricultural-Robotics-Ver-1.0/issues"
+  },
+  "homepage": "https://github.com/FIU-SCIS-Senior-Projects/Agricultural-Robotics-Ver-1.0#readme",
   "dependencies": {
-    "ar-drone": "^0.3.3",
-    "native-base": "^0.5.8",
     "react": "15.3.1",
-    "react-native": "0.32.0",
-    "react-native-maps": "^0.8.0",
-    "react-redux": "^4.4.5"
-  },
-  "devDependencies": {
-    "flow-bin": "^0.30.0"
+    "react-native": "^0.33.0"
   }
 }
