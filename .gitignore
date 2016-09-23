@@ -49,7 +49,6 @@ android/.idea/misc.xml
 .DS_Store
 .project
 .settings
-config.js
 node_modules
 components
 bower_components
