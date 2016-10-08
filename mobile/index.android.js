@@ -1,32 +1,62 @@
-'use strict';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
 
-import React from 'react';
+import React, {
+  Component,
+  Subscribable
+} from 'react';
+
 import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  DeviceEventEmitter,
+  Navigator,
+  TouchableOpacity
 } from 'react-native';
 
-class HelloWorld extends React.Component {
+import SplashPage from './app/components/SplashPage';
+import NavDataTestPage from './app/components/NavDataTestPage';
+
+console.log('SplashPage', SplashPage);
+console.log('NavDataTestPage', NavDataTestPage);
+
+class FruiTREC extends Component {
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.hello}>Hello, World</Text>
-      </View>
-    )
+      <Navigator
+          renderScene={this.renderScene.bind(this)}
+          initialRoute={{id: 'SplashPage', name: 'Index'}}
+          configureScene={(route) => {
+            if (route.sceneConfig) {
+              return route.sceneConfig;
+            }
+            return Navigator.SceneConfigs.FloatFromRight;
+          }} />
+    );
+  }
+
+  renderScene(route, navigator) {
+    var routeId = route.id;
+
+    if (routeId === 'SplashPage') {
+      return (
+        <SplashPage
+          navigator={navigator} />
+      );
+    } else if (routeId === 'NavDataTestPage') {
+      return (
+        <NavDataTestPage
+          navigator={navigator} />
+      );
+    }
+
   }
 }
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  hello: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-});
 
-AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
+AppRegistry.registerComponent('FruiTREC', () => FruiTREC);
