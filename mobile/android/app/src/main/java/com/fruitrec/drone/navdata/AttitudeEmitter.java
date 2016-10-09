@@ -1,6 +1,8 @@
 package com.fruitrec.drone.navdata;
 
 
+import android.util.Log;
+
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.WritableMap;
@@ -26,14 +28,16 @@ public class AttitudeEmitter extends ReactEventEmitter implements AttitudeListen
 
     @Override
     public void attitudeUpdated(float pitch, float roll, float yaw) {
-        if(!isReadyToEmit(UPDATE_ATTITUDE_PYR) && isReadyToEmit(UPDATE_ATTITUDE_TP)) return;
+        Log.v("attitudeUpdated", "pitch: " + pitch + ", roll:" + roll + ", yaw: " + yaw);
+        if(!isReadyToEmit(UPDATE_ATTITUDE_PYR)) return;
         turnOffEmit(UPDATE_ATTITUDE_PYR);
+        Log.v("attitudeUpdated", "Interval passed, sending this event.");
 
         WritableMap params = Arguments.createMap();
         params.putDouble("pitch", pitch);
         params.putDouble("roll", roll);
         params.putDouble("yaw", yaw);
-        sendEvent("attitudeDidChange", params);
+        sendEvent("attitude", params);
     }
 
     @Override

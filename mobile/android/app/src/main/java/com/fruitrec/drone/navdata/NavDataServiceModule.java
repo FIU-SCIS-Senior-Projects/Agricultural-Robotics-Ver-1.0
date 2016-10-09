@@ -2,6 +2,7 @@ package com.fruitrec.drone.navdata;
 
 import android.util.Log;
 
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -22,60 +23,83 @@ public class NavDataServiceModule extends ReactContextBaseJavaModule {
     public NavDataServiceModule(ReactApplicationContext reactContext) {
         super(reactContext);
         drone = new ARDrone("192.168.1.1", null);
+        registeredSubscriptions = new ArrayList<>();
         Log.v("Agrobo", "Initializing NavDataServiceModule");
     }
 
-    @ReactMethod
-    public void subscribeToEvent(String subscriptionName){
+    private void subscribeToEvent(String subscriptionName) throws InvalidEventSubscrtipion {
         NavDataManager ndManager = drone.getNavDataManager();
         ReactEventEmitter emitter = null;
 
-        switch (subscriptionName){
-            case "attitude":
-                emitter = new AttitudeEmitter(getReactApplicationContext(), drone.getNavDataManager());
-                ndManager.addAttitudeListener((AttitudeEmitter) emitter);
-                break;
-            //case "altitude":
-                //emitter = new AltitudeEmitter(getReactApplicationContext(), drone.getNavDataManager());
-                //ndManager.addAltitudeListener((AltitudeListener) emitter);
-                //break;
+        if(subscriptionName.equals("attitude")){
+            emitter = new AttitudeEmitter(getReactApplicationContext(), drone.getNavDataManager());
+            ndManager.addAttitudeListener((AttitudeEmitter) emitter);
+        } else {
+            throw new InvalidEventSubscrtipion(subscriptionName);
         }
 
-        if(emitter != null){
+        if(emitter != null){ // Shouldn't happen but hey...
             registeredSubscriptions.add(emitter);
         }
     }
 
     @ReactMethod
-    public void subscribeToEvents(ReadableArray subscriptions){
-        for(int i = 0; i < subscriptions.size(); i++){
-            subscribeToEvent(subscriptions.getString(i));
+    public void subscribe(String subscriptionName, Promise p) {
+        try {
+            subscribeToEvent(subscriptionName);
+            p.resolve("Success");
+        } catch(Exception e) {
+            e.printStackTrace();
+            p.reject(e);
         }
+
+    }
+
+    @ReactMethod
+    public void subscribeAll(ReadableArray subscriptions, Promise p) {
+        try {
+            for(int i = 0; i < subscriptions.size(); i++){
+                subscribeToEvent(subscriptions.getString(i));
+            }
+            p.resolve("Success");
+        } catch (Exception e){
+            e.printStackTrace();
+            p.reject(e);
+        }
+
     }
 
 
     @ReactMethod
-    public void connect(){
+    public void connect(Promise p){
         try
         {
             drone.start();
+            p.resolve("Success");
         }
-        catch(Exception exc)
+        catch(Exception e)
         {
-            exc.printStackTrace();
-
-            if (drone != null)
-                drone.stop();
+            e.printStackTrace();
+            if (drone != null) drone.stop();
+            p.reject(e);
         }
     }
 
     @ReactMethod
-    public void disconnect(){
-        for(ReactEventEmitter emitter: registeredSubscriptions){
-            emitter.removeListener();
-        }
+    public void disconnect(Promise p){
+        try {
+            for(ReactEventEmitter emitter: registeredSubscriptions){
+                emitter.removeListener();
+            }
 
-        registeredSubscriptions.clear();
+            registeredSubscriptions.clear();
+            drone.stop();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            p.reject(e);
+        }
     }
 
     @Override
@@ -85,5 +109,11 @@ public class NavDataServiceModule extends ReactContextBaseJavaModule {
 
     public NavDataManager getNavDataManager(){
         return navDataManager;
+    }
+
+    private class InvalidEventSubscrtipion extends Exception {
+        public InvalidEventSubscrtipion(String subscriptionName) {
+            super("The subscription name provided does not exist: " + subscriptionName);
+        }
     }
 }
