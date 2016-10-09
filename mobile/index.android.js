@@ -43,13 +43,15 @@ class FruiTREC extends Component {
 
   renderScene(route, navigator) {
     var routeId = route.id;
-
+    console.log('renderScene', route, navigator);
     if (routeId === 'SplashPage') {
+      console.log("routeId === 'SplashPage'");
       return (
         <SplashPage
           navigator={navigator} />
       );
     } else if (routeId === 'NavDataTestPage') {
+      console.log("routeId === 'NavDataTestPage'");
       return (
         <NavDataTestPage
           navigator={navigator} />

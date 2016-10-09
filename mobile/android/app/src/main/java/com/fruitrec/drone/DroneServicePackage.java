@@ -5,13 +5,11 @@ import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
+import com.fruitrec.drone.navdata.NavDataServiceModule;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import de.yadrone.base.ARDrone;
-import de.yadrone.base.IARDrone;
 
 public class DroneServicePackage implements ReactPackage {
 
