@@ -42,6 +42,7 @@ gen-external-apklibs
 *.iml
 
 ## Directory-based project format:
+android/.idea
 .idea/
 # if you remove the above rule, at least ignore the following:
 
