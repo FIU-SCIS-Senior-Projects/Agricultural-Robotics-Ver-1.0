@@ -14,7 +14,9 @@ import java.util.TimerTask;
 
 import de.yadrone.base.ARDrone;
 import de.yadrone.base.IARDrone;
+import de.yadrone.base.navdata.AltitudeListener;
 import de.yadrone.base.navdata.GPSListener;
+import de.yadrone.base.navdata.GyroListener;
 import de.yadrone.base.navdata.NavDataManager;
 
 public class NavDataServiceModule extends ReactContextBaseJavaModule {
@@ -35,6 +37,7 @@ public class NavDataServiceModule extends ReactContextBaseJavaModule {
     private void createNavdataOptionsInterval() {
         new Timer().scheduleAtFixedRate(new TimerTask() {
             public void run() {
+                drone.getCommandManager().setNavDataDemo(false);
                 drone.getCommandManager().setNavDataOptions(MASK_ALL_OPTIONS);
             }
         }, 250, 250);
@@ -47,10 +50,34 @@ public class NavDataServiceModule extends ReactContextBaseJavaModule {
         if(subscriptionName.equals("attitude")) {
             emitter = new AttitudeEmitter(getReactApplicationContext(), drone.getNavDataManager());
             ndManager.addAttitudeListener((AttitudeEmitter) emitter);
+        } else if(subscriptionName.equals("altitude")){
+            Log.v("subscribeToEvent:", "Subscribed to 'altitude' event");
+            emitter = new AltitudeEmitter(getReactApplicationContext(), drone.getNavDataManager());
+            ndManager.addAltitudeListener((AltitudeEmitter) emitter);
+        } else if(subscriptionName.equals("battery")) {
+            Log.v("subscribeToEvent:", "Subscribed to 'battery' event");
+            emitter = new BatteryEmitter(getReactApplicationContext(), drone.getNavDataManager());
+            ndManager.addBatteryListener((BatteryEmitter) emitter);
+        } else if(subscriptionName.equals("flyState")) {
+            Log.v("subscribeToEvent:", "Subscribed to 'flyState' event");
+            emitter = new FlyStateEmitter(getReactApplicationContext(), drone.getNavDataManager());
+            ndManager.addStateListener((FlyStateEmitter) emitter);
         } else if(subscriptionName.equals("gps")) {
             Log.v("subscribeToEvent:", "Subscribed to 'gps' event");
             emitter = new GPSEmitter(getReactApplicationContext(), drone.getNavDataManager());
             ndManager.addGPSListener((GPSEmitter) emitter);
+        } else if(subscriptionName.equals("gyro")) {
+            Log.v("subscribeToEvent:", "Subscribed to 'gyro' event");
+            emitter = new GyroEmitter(getReactApplicationContext(), drone.getNavDataManager());
+            ndManager.addGyroListener((GyroEmitter) emitter);
+        } else if(subscriptionName.equals("accelero")) {
+            Log.v("subscribeToEvent:", "Subscribed to 'accelero' event");
+            emitter = new AcceleroEmitter(getReactApplicationContext(), drone.getNavDataManager());
+            ndManager.addAcceleroListener((AcceleroEmitter) emitter);
+        } else if(subscriptionName.equals("magneto")) {
+            Log.v("subscribeToEvent:", "Subscribed to 'magneto' event");
+            emitter = new MagnetoEmitter(getReactApplicationContext(), drone.getNavDataManager());
+            ndManager.addMagnetoListener((MagnetoEmitter) emitter);
         } else {
             throw new InvalidEventSubscrtipion(subscriptionName);
         }

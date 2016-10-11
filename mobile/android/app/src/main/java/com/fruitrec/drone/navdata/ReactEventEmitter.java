@@ -14,7 +14,7 @@ import de.yadrone.base.navdata.NavDataManager;
 
 public abstract class ReactEventEmitter {
 
-    private static int EMIT_INTERVAL = 1000;
+    private static int EMIT_INTERVAL = 400;
 
     private ReactApplicationContext reactContext;
     private ArrayList<Boolean> emitFlags;

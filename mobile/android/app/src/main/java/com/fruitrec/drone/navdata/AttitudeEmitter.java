@@ -22,11 +22,6 @@ public class AttitudeEmitter extends ReactEventEmitter implements AttitudeListen
     }
 
     @Override
-    public void removeListener() {
-        getNavDataManager().removeAttitudeListener(this);
-    }
-
-    @Override
     public void attitudeUpdated(float pitch, float roll, float yaw) {
         Log.v("attitudeUpdated", "pitch: " + pitch + ", roll:" + roll + ", yaw: " + yaw);
         if(!isReadyToEmit(UPDATE_ATTITUDE_PYR)) return;
@@ -65,4 +60,10 @@ public class AttitudeEmitter extends ReactEventEmitter implements AttitudeListen
         params.putDouble("windCompensationPhiAngle", windCompensationPhiAngle);
         sendEvent("attitude", params);
     }
+
+    @Override
+    public void removeListener() {
+        getNavDataManager().removeAttitudeListener(this);
+    }
+
 }
