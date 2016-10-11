@@ -50,7 +50,6 @@ android/.idea/misc.xml
 .project
 .settings
 node_modules
-components
 bower_components
 _site
 pictures
