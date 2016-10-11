@@ -16,7 +16,6 @@ import de.yadrone.base.navdata.NavDataManager;
 
 public class NavDataServiceModule extends ReactContextBaseJavaModule {
 
-    private NavDataManager navDataManager;
     private IARDrone drone;
     private ArrayList<ReactEventEmitter> registeredSubscriptions;
 
@@ -108,7 +107,7 @@ public class NavDataServiceModule extends ReactContextBaseJavaModule {
     }
 
     public NavDataManager getNavDataManager(){
-        return navDataManager;
+        return drone.getNavDataManager();
     }
 
     private class InvalidEventSubscrtipion extends Exception {

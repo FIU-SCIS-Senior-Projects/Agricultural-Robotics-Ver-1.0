@@ -18,7 +18,7 @@ public class AttitudeEmitter extends ReactEventEmitter implements AttitudeListen
 
     public AttitudeEmitter(ReactApplicationContext context, NavDataManager manager) {
         super(context, manager);
-        initializeEventEmitter(3);
+        initializeEventFlags(3);
     }
 
     @Override
@@ -42,23 +42,27 @@ public class AttitudeEmitter extends ReactEventEmitter implements AttitudeListen
 
     @Override
     public void attitudeUpdated(float thetaAngle, float phiAngle) {
+        Log.v("attitudeUpdated", "thetaAngle: " + thetaAngle + ", phiAngle:" + phiAngle);
         if(!isReadyToEmit(UPDATE_ATTITUDE_TP)) return;
         turnOffEmit(UPDATE_ATTITUDE_TP);
+        Log.v("attitudeUpdated", "Interval passed, sending this event.");
 
-        //WritableMap params = Arguments.createMap();
-        //params.putDouble("thetaAngle", thetaAngle);
-        //params.putDouble("phiAngle", phiAngle);
-        //sendEvent("attitudeDidChange", params);
+        WritableMap params = Arguments.createMap();
+        params.putDouble("thetaAngle", thetaAngle);
+        params.putDouble("phiAngle", phiAngle);
+        sendEvent("attitude", params);
     }
 
     @Override
     public void windCompensation(float windCompensationThetaAngle, float windCompensationPhiAngle) {
+        Log.v("attitudeUpdated", "windCompensationThetaAngle: " + windCompensationThetaAngle + ", windCompensationPhiAngle:" + windCompensationPhiAngle);
         if(!isReadyToEmit(UPDATE_WIND_COMPENSATION)) return;
         turnOffEmit(UPDATE_WIND_COMPENSATION);
+        Log.v("attitudeUpdated", "Interval passed, sending this event.");
 
-        //WritableMap params = Arguments.createMap();
-        //params.putDouble("windCompensationThetaAngle", windCompensationThetaAngle);
-        //params.putDouble("windCompensationPhiAngle", windCompensationPhiAngle);
-        //sendEvent("attitudeDidChange", params);
+        WritableMap params = Arguments.createMap();
+        params.putDouble("windCompensationThetaAngle", windCompensationThetaAngle);
+        params.putDouble("windCompensationPhiAngle", windCompensationPhiAngle);
+        sendEvent("attitude", params);
     }
 }

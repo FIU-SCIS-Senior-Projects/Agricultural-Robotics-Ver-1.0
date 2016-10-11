@@ -23,7 +23,7 @@ public abstract class ReactEventEmitter {
     public ReactEventEmitter(ReactApplicationContext context, NavDataManager manager){
         reactContext = context;
         ndManager = manager;
-        initializeEventEmitter(1);
+        initializeEventFlags(1);
         createEmitInterval(EMIT_INTERVAL);
     }
 
@@ -56,7 +56,7 @@ public abstract class ReactEventEmitter {
                 .emit(eventName, params);
     }
 
-    protected void initializeEventEmitter(int numEvents){
+    protected void initializeEventFlags(int numEvents){
         emitFlags = new ArrayList<Boolean>(Arrays.<Boolean>asList(new Boolean[numEvents]));
     }
 
