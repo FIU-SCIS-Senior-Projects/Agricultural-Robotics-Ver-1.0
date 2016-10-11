@@ -16,12 +16,15 @@ import de.yadrone.base.navdata.NavDataManager;
 
 public class NavDataServiceModule extends ReactContextBaseJavaModule {
 
+    private static String DEFAULT_INET_ADDRESS = "192.168.1.1";
+    private static int MASK_ALL_OPTIONS = 777060865;
+
     private IARDrone drone;
     private ArrayList<ReactEventEmitter> registeredSubscriptions;
 
     public NavDataServiceModule(ReactApplicationContext reactContext) {
         super(reactContext);
-        drone = new ARDrone("192.168.1.1", null);
+        drone = new ARDrone(DEFAULT_INET_ADDRESS, null);
         registeredSubscriptions = new ArrayList<>();
         Log.v("Agrobo", "Initializing NavDataServiceModule");
     }
@@ -74,6 +77,8 @@ public class NavDataServiceModule extends ReactContextBaseJavaModule {
         try
         {
             drone.start();
+            //drone.getCommandManager().setNavDataDemo(false);
+            drone.getCommandManager().setNavDataOptions(MASK_ALL_OPTIONS);
             p.resolve("Success");
         }
         catch(Exception e)

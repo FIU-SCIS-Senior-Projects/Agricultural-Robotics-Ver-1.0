@@ -48,8 +48,6 @@ public class CommandManager
     flatTrim();
     this.q.add(new TakeOffCommand());
   }
-  
-
 
   public void emergency()
   {
@@ -123,38 +121,23 @@ public class CommandManager
   private float perc2float(int speed) {
     return speed / 100.0F;
   }
-  
-
-
 
   public void setVideoCodecFps(int fps)
   {
     fps = limit(fps, 15, 30);
     this.q.add(new ConfigureCommand("video:codec_fps", fps));
   }
-  
-
-
-
-
-
 
   public void setVideoBitrateControl(VideoBitRateMode mode)
   {
     this.q.add(new ConfigureCommand("video:bitrate_control_mode", mode.ordinal()));
   }
-  
-
-
 
   public void setVideoBitrate(int rate)
   {
     rate = limit(rate, 250, 4000);
     this.q.add(new ConfigureCommand("video:bitrate", rate));
   }
-  
-
-
 
   public void setMaxVideoBitrate(int rate)
   {
@@ -162,55 +145,25 @@ public class CommandManager
     this.q.add(new ConfigureCommand("video:max_bitrate", rate));
   }
   
-
-
-
-
-
-
-
-
-
   public void setVideoCodec(VideoCodec c)
   {
     this.q.add(new ConfigureCommand("video:video_codec", c.getValue()));
   }
-  
-
-
-
 
   public void setVideoOnUsb(boolean b)
   {
     this.q.add(new ConfigureCommand("video:video_on_usb", b));
   }
-  
-
-
-
-
-
-
-
-
 
   public void setNavDataDemo(boolean b)
   {
-    this.q.add(new ConfigureCommand("general:navdata_demo", b));
+    this.q.add(new ConfigureCommand("general:navdata_demo", b ? "TRUE" : "FALSE"));
   }
-  
-
-
 
   public void setNavDataOptions(int mask)
   {
     this.q.add(new ConfigureCommand("general:navdata_options", mask));
   }
-  
-
-
-
-
 
   public void setLedsAnimation(LEDAnimation anim, float freq, int duration)
   {
@@ -224,26 +177,11 @@ public class CommandManager
   {
     this.q.add(new ConfigureCommand("detect:enemy_without_shell", b ? "1" : "0"));
   }
-  
-
-
-
-
-
-
-
 
   public void setEnemyColors(EnemyColor c)
   {
     this.q.add(new ConfigureCommand("detect:enemy_colors", c.getValue()));
   }
-  
-
-
-
-
-
-
 
   public void setDetectionType(CadType type)
   {
@@ -428,10 +366,6 @@ public class CommandManager
   public void setCommand(ATCommand command) {
     this.q.add(command);
   }
-  
-
-
-
 
   public void setOutdoor(boolean flying_outdoor, boolean outdoor_hull)
   {
@@ -439,20 +373,6 @@ public class CommandManager
     this.q.add(new ConfigureCommand("control:outdoor", flying_outdoor));
     this.q.add(new ConfigureCommand("control:flight_without_shell", outdoor_hull));
   }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   public void animate(FlightAnimation a)
   {
@@ -464,47 +384,26 @@ public class CommandManager
     this.q.add(new ConfigureCommand("gps:longitude", longitude));
     this.q.add(new ConfigureCommand("gps:altitude", altitude));
   }
-  
-
-
-
 
   public void setUltrasoundFrequency(UltrasoundFrequency f)
   {
     this.q.add(new ConfigureCommand("pic:ultrasound_freq", f.getValue()));
   }
-  
-
-
 
   public void setSSIDSinglePlayer(String ssid)
   {
     this.q.add(new ConfigureCommand("network:ssid_single_player", ssid));
   }
-  
-
-
 
   public void setSSIDMultiPlayer(String ssid)
   {
     this.q.add(new ConfigureCommand("network:ssid_multi_player", ssid));
   }
-  
-
-
-
-
-
-
-
 
   public void setWifiMode(WifiMode mode)
   {
     this.q.add(new ConfigureCommand("network:wifi_mode", mode.ordinal()));
   }
-  
-
-
 
   public void setOwnerMac(String mac)
   {
@@ -531,129 +430,16 @@ public class CommandManager
     this.q.add(new ConfigureCommand("userbox:userbox_cmd", String.valueOf(UserBox.SCREENSHOT.ordinal()) + "," + 
       String.valueOf(delay) + "," + String.valueOf(nshots) + "," + label));
   }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   private void sendMisc(int p1, int p2, int p3, int p4)
   {
     this.q.add(new MiscCommand(p1, p2, p3, p4));
   }
-  
 
   private void sendPMode(int mode)
   {
     this.q.add(new PMODECommand(mode));
   }
-  
-
-
-
-
-
-
-
-
 
   public void run()
   {

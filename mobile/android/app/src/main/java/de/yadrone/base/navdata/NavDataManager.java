@@ -1,5 +1,7 @@
 package de.yadrone.base.navdata;
 
+import android.util.Log;
+
 import de.yadrone.base.command.CommandManager;
 import de.yadrone.base.command.DetectionType;
 import de.yadrone.base.manager.AbstractManager;
@@ -12,32 +14,6 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.zip.CRC32;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 public class NavDataManager
   extends AbstractManager
@@ -456,8 +432,9 @@ public class NavDataManager
   private static final int ZIMMU_3000_TAG = 27;
   private void parseOption(int tag, ByteBuffer optionData)
   {
+    Log.v("parseOption:", "tag==" + tag);
     switch (tag) {
-    case -1: 
+    case -1:
       parseCksOption(optionData);
       break;
     case 0: 
@@ -538,11 +515,12 @@ public class NavDataManager
     case 25: 
       parseHDVideoSteamOption(optionData);
       break;
-    case 26: 
+    case 26:
       parseWifiOption(optionData);
       break;
-    case 27: 
-      parseZimmu3000Option(optionData);
+    case 27:
+      //parseZimmu3000Option(optionData);
+      break;
     }
     
   }

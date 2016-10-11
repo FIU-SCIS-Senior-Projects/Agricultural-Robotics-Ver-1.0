@@ -43,8 +43,12 @@ public abstract class ATCommand
   private String getParametersString()
   {
     StringBuffer sb = new StringBuffer();
-    Object[] arrayOfObject; int j = (arrayOfObject = getParameters()).length; for (int i = 0; i < j; i++) { Object p = arrayOfObject[i];
-      
+    Object[] arrayOfObject;
+
+    int j = (arrayOfObject = getParameters()).length;
+
+    for (int i = 0; i < j; i++) {
+      Object p = arrayOfObject[i];
       sb.append(',').append(encodeParameter(p));
     }
     
