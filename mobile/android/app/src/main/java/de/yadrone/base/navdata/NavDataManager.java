@@ -6,6 +6,7 @@ import de.yadrone.base.command.CommandManager;
 import de.yadrone.base.command.DetectionType;
 import de.yadrone.base.manager.AbstractManager;
 import java.io.PrintStream;
+import java.lang.reflect.Array;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -52,6 +53,7 @@ public class NavDataManager
   private ArrayList<PWMlistener> pwmlistener = new ArrayList();
   private ArrayList<ReferencesListener> referencesListener = new ArrayList();
   private ArrayList<TrimsListener> trimsListener = new ArrayList();
+  private ArrayList<GPSListener> gpsListener = new ArrayList();
   
   private long lastSequenceNumber = 1L;
   
@@ -258,15 +260,27 @@ public class NavDataManager
     this.wifiListener.remove(wifiListener);
     setMask(this.wifiListener.size() == 0, new int[] { 26 });
   }
-  
+
+  @Deprecated
   public void addZimmu3000Listener(Zimmu3000Listener zimmu3000Listener) {
     this.zimmu3000Listener.add(zimmu3000Listener);
     setMask(this.zimmu3000Listener.size() == 1, new int[] { 27 });
   }
-  
+
+  @Deprecated
   public void removeZimmu3000Listener(Zimmu3000Listener zimmu3000Listener) {
     this.zimmu3000Listener.remove(zimmu3000Listener);
     setMask(this.zimmu3000Listener.size() == 0, new int[] { 27 });
+  }
+
+  public void addGPSListener(GPSListener gpsListener) {
+    this.gpsListener.add(gpsListener);
+    setMask(this.gpsListener.size() == 1, new int[] { 27 });
+  }
+
+  public void removeGPSListener(GPSListener gpsListener) {
+    this.gpsListener.remove(gpsListener);
+    setMask(this.gpsListener.size() == 0, new int[] { 27 });
   }
   
   public void addPWMlistener(PWMlistener pwmlistener) {
@@ -388,9 +402,15 @@ public class NavDataManager
       int tag = b.getShort() & 0xFFFF;
       int payloadSize = (b.getShort() & 0xFFFF) - 4;
       ByteBuffer optionData = b.slice().order(ByteOrder.LITTLE_ENDIAN);
-      optionData.limit(payloadSize);
-      parseOption(tag, optionData);
-      b.position(b.position() + payloadSize);
+      try{
+        optionData.limit(payloadSize);
+        parseOption(tag, optionData);
+        b.position(b.position() + payloadSize);
+      } catch(Exception e) {
+
+      } finally {
+
+      }
     }
     
 
@@ -519,6 +539,7 @@ public class NavDataManager
       parseWifiOption(optionData);
       break;
     case 27:
+      parseGPSOption(optionData);
       //parseZimmu3000Option(optionData);
       break;
     }
@@ -541,7 +562,49 @@ public class NavDataManager
       }
     }
   }
-  
+
+  private void parseGPSOption(ByteBuffer b){
+    if (this.gpsListener.size() > 0){
+      double latitude = b.getDouble();
+      double longitude = b.getDouble();
+      double elevation = b.getDouble();
+      double hdop = b.getDouble();
+      long dataAvailable = getUInt32(b);
+      boolean zeroValidated = getBoolean(b);
+      boolean wptValidated = getBoolean(b);
+      double latitudeZero = b.getDouble();
+      double longitudeZero = b.getDouble();
+      double latitudeFused = b.getDouble();
+      double longitudeFuzed = b.getDouble();
+      long gpsState = getUInt32(b);
+      float xTrajectory = b.getFloat();
+      float yTrajectory = b.getFloat();
+      float xReference = b.getFloat();
+      float yReference = b.getFloat();
+
+      for (int i = 0; i < this.gpsListener.size(); i++) {
+        ((GPSListener)this.gpsListener.get(i)).received(
+          latitude,
+          longitude,
+          elevation,
+          hdop,
+          dataAvailable,
+          zeroValidated,
+          wptValidated,
+          latitudeZero,
+          longitudeZero,
+          latitudeFused,
+          longitudeFuzed,
+          gpsState,
+          xTrajectory,
+          yTrajectory,
+          xReference,
+          yReference
+        );
+      }
+    }
+  }
+
   private void parseWifiOption(ByteBuffer b)
   {
     if (this.wifiListener.size() > 0) {

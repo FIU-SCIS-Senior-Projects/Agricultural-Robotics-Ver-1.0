@@ -9,9 +9,12 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import de.yadrone.base.ARDrone;
 import de.yadrone.base.IARDrone;
+import de.yadrone.base.navdata.GPSListener;
 import de.yadrone.base.navdata.NavDataManager;
 
 public class NavDataServiceModule extends ReactContextBaseJavaModule {
@@ -29,13 +32,25 @@ public class NavDataServiceModule extends ReactContextBaseJavaModule {
         Log.v("Agrobo", "Initializing NavDataServiceModule");
     }
 
+    private void createNavdataOptionsInterval() {
+        new Timer().scheduleAtFixedRate(new TimerTask() {
+            public void run() {
+                drone.getCommandManager().setNavDataOptions(MASK_ALL_OPTIONS);
+            }
+        }, 250, 250);
+    }
+
     private void subscribeToEvent(String subscriptionName) throws InvalidEventSubscrtipion {
         NavDataManager ndManager = drone.getNavDataManager();
         ReactEventEmitter emitter = null;
 
-        if(subscriptionName.equals("attitude")){
+        if(subscriptionName.equals("attitude")) {
             emitter = new AttitudeEmitter(getReactApplicationContext(), drone.getNavDataManager());
             ndManager.addAttitudeListener((AttitudeEmitter) emitter);
+        } else if(subscriptionName.equals("gps")) {
+            Log.v("subscribeToEvent:", "Subscribed to 'gps' event");
+            emitter = new GPSEmitter(getReactApplicationContext(), drone.getNavDataManager());
+            ndManager.addGPSListener((GPSEmitter) emitter);
         } else {
             throw new InvalidEventSubscrtipion(subscriptionName);
         }
@@ -63,6 +78,8 @@ public class NavDataServiceModule extends ReactContextBaseJavaModule {
             for(int i = 0; i < subscriptions.size(); i++){
                 subscribeToEvent(subscriptions.getString(i));
             }
+
+            drone.getCommandManager().setNavDataOptions(MASK_ALL_OPTIONS);
             p.resolve("Success");
         } catch (Exception e){
             e.printStackTrace();
@@ -78,7 +95,8 @@ public class NavDataServiceModule extends ReactContextBaseJavaModule {
         {
             drone.start();
             //drone.getCommandManager().setNavDataDemo(false);
-            drone.getCommandManager().setNavDataOptions(MASK_ALL_OPTIONS);
+            //drone.getCommandManager().setNavDataOptions(MASK_ALL_OPTIONS);
+            createNavdataOptionsInterval();
             p.resolve("Success");
         }
         catch(Exception e)
