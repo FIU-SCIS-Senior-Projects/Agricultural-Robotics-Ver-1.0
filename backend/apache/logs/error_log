@@ -1,0 +1,15 @@
+[Sat Oct 08 12:33:18.901309 2016] [mpm_event:notice] [pid 11571:tid 140425830168448] AH00489: Apache/2.4.23 (Unix) configured -- resuming normal operations
+[Sat Oct 08 12:33:18.901701 2016] [core:notice] [pid 11571:tid 140425830168448] AH00094: Command line: '/home/fabodo/GitHub/Agricultural-Robotics-Ver-1.0/backend/apache/bin/httpd'
+[Sat Oct 08 12:34:12.616089 2016] [mpm_event:notice] [pid 11571:tid 140425830168448] AH00491: caught SIGTERM, shutting down
+[Sat Oct 08 12:35:21.700063 2016] [mpm_event:notice] [pid 12039:tid 140457266644864] AH00489: Apache/2.4.23 (Unix) configured -- resuming normal operations
+[Sat Oct 08 12:35:21.700197 2016] [core:notice] [pid 12039:tid 140457266644864] AH00094: Command line: '/home/fabodo/GitHub/Agricultural-Robotics-Ver-1.0/backend/apache/bin/httpd'
+[Sat Oct 08 12:38:20.272440 2016] [mpm_event:notice] [pid 12039:tid 140457266644864] AH00491: caught SIGTERM, shutting down
+[Sat Oct 08 12:53:25.829397 2016] [mpm_event:notice] [pid 16649:tid 139996799584128] AH00489: Apache/2.4.23 (Unix) mod_wsgi/4.5.7 Python/3.4 configured -- resuming normal operations
+[Sat Oct 08 12:53:25.829509 2016] [core:notice] [pid 16649:tid 139996799584128] AH00094: Command line: '/home/fabodo/GitHub/Agricultural-Robotics-Ver-1.0/backend/apache/bin/httpd'
+[Sat Oct 08 12:56:04.509480 2016] [mpm_event:notice] [pid 16649:tid 139996799584128] AH00494: SIGHUP received.  Attempting to restart
+[Sat Oct 08 12:56:04.515451 2016] [mpm_event:notice] [pid 16649:tid 139996799584128] AH00489: Apache/2.4.23 (Unix) mod_wsgi/4.5.7 Python/3.4 configured -- resuming normal operations
+[Sat Oct 08 12:56:04.515472 2016] [core:notice] [pid 16649:tid 139996799584128] AH00094: Command line: '/home/fabodo/GitHub/Agricultural-Robotics-Ver-1.0/backend/apache/bin/httpd'
+[Sat Oct 08 13:56:58.168892 2016] [mpm_event:notice] [pid 16649:tid 139996799584128] AH00491: caught SIGTERM, shutting down
+[Sat Oct 08 13:57:02.860154 2016] [mpm_event:notice] [pid 28556:tid 139745566140288] AH00489: Apache/2.4.23 (Unix) mod_wsgi/4.5.7 Python/3.4 configured -- resuming normal operations
+[Sat Oct 08 13:57:02.860250 2016] [core:notice] [pid 28556:tid 139745566140288] AH00094: Command line: '/home/fabodo/GitHub/Agricultural-Robotics-Ver-1.0/backend/apache/bin/httpd'
+[Sat Oct 08 13:57:07.290588 2016] [mpm_event:notice] [pid 28556:tid 139745566140288] AH00491: caught SIGTERM, shutting down
