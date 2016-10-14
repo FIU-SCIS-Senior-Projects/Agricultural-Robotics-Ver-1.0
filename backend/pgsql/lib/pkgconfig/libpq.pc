@@ -1,0 +1,9 @@
+Name: libpq
+Description: PostgreSQL libpq library
+Url: http://www.postgresql.org/
+Version: 9.5.4
+Requires: 
+Requires.private: 
+Cflags: -I/home/fabodo/GitHub/Agricultural-Robotics-Ver-1.0/backend/pgsql/include
+Libs: -L/home/fabodo/GitHub/Agricultural-Robotics-Ver-1.0/backend/pgsql/lib -lpq
+Libs.private:  -lcrypt -lpthread
