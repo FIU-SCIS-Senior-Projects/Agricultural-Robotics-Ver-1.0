@@ -1,9 +1,0 @@
-Name: libecpg_compat
-Description: PostgreSQL libecpg_compat library
-Url: http://www.postgresql.org/
-Version: 9.5.4
-Requires: 
-Requires.private: libecpg libpgtypes
-Cflags: -I/home/fabodo/GitHub/Agricultural-Robotics-Ver-1.0/backend/pgsql/include
-Libs: -L/home/fabodo/GitHub/Agricultural-Robotics-Ver-1.0/backend/pgsql/lib -lecpg_compat
-Libs.private:  -lpq -lm -lpthread
