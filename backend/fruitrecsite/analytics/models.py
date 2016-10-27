@@ -1,14 +1,14 @@
 from django.db import models
-#TODO add human-readable 'verbose' names as the first positional argument of each field (all lowercase)
-# is it better to make every model field an array of the data type be default,
-# or to make a super-model with an array of models that have singleton model fields
+from django.contrib.postgres.fields import ArrayField
+# TODO add human-readable 'verbose' names as the first positional argument of each field (all lowercase)
 
 #######################################################################
 #                            Mission Model                            #
 #######################################################################
 
+
 class Mission(models.Model):
-    pass
+    drone_ssid = models.CharField(max_length=100)
 
 #######################################################################
 #                      VideoStreamService Models                      #
@@ -25,113 +25,123 @@ class Mission(models.Model):
 #######################################################################
 
 
-# Many NavData models are related to one Mission model
-class NavData(models.Model):
+# Many NavDataSet models are related to one Mission model
+class NavDataSet(models.Model):
     mission = models.ForeignKey(Mission, on_delete=models.CASCADE)
 
-class FlightStatusData(models.Model):
+
+class NavData(models.Model):
+    nav_data_set = models.ForeignKey(NavDataSet, on_delete=models.CASCADE)
+    
+    
+class FlightStatusData(NavData):
     state = models.IntegerField()
     vision = models.IntegerField()
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
 
-class TimeData(models.Model):
+
+class TimeData(NavData):
     seconds = models.IntegerField()
-    useconds = models.IntegerField()
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
+    u_seconds = models.IntegerField()
 
-class AcceleroRawData(models.Model):
-    raw_accs = models.ArrayField(models.PositiveIntegerField(), size=3)
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
 
-class AcceleroPhysData(models.Model):
-    phys_accs = models.ArrayField(models.FloatField(), size=3)
-    phys_gyros = models.ArrayField(models.FloatField(), size=3)
-    alim3V3 = models.IntegerField()
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
+class AcceleroRawData(NavData):
+    raw_accs = ArrayField(models.PositiveIntegerField(), size=3)
 
-class GyroRawData(models.Model):
-    raw_gyros = models.ArrayField(models.IntegerField(), size=3)
-    raw_gyros_110 = models.ArrayField(models.IntegerField(), size=2)
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
 
-class GyroPhysData(models.Model):
+class AcceleroPhysData(NavData):
+    phys_accs = ArrayField(models.FloatField(), size=3)
+    phys_gyros = ArrayField(models.FloatField(), size=3)
+    alim_3v3 = models.IntegerField()
+
+
+class GyroRawData(NavData):
+    raw_gyros = ArrayField(models.IntegerField(), size=3)
+    raw_gyros_110 = ArrayField(models.IntegerField(), size=2)
+
+
+class GyroPhysData(NavData):
     gyro_temp = models.IntegerField()
-    phys_gyros = models.ArrayField(models.FloatField(), size=3)
-    alim3V3 = models.IntegerField()
-    vrefEpson = models.IntegerField()
-    vrefIDG = models.IntegerField()
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
+    phys_gyros = ArrayField(models.FloatField(), size=3)
+    alim_3v3 = models.IntegerField()
+    vref_epson = models.IntegerField()
+    vref_idg = models.IntegerField()
 
-class GyroOffsetData(models.Model):
-    offset_g = models.ArrayField(models.FloatField(), size=3)
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
 
-class MagnetoData():
-    m = models.ArrayField(models.IntegerField(), size=3)
-    mraw = models.ArrayField(models.FloatField(), size=3)
-    mrectified = models.ArrayField(models.FloatField(), size=3)
-    m_ = models.ArrayField(models.FloatField(), size=3)
+class GyroOffsetData(NavData):
+    offset_g = ArrayField(models.FloatField(), size=3)
+
+
+class MagnetoData(NavData):
+    m = ArrayField(models.IntegerField(), size=3)
+    m_raw = ArrayField(models.FloatField(), size=3)
+    m_rectified = ArrayField(models.FloatField(), size=3)
+    # renamed from m_ because postgres "Field names must not end with an underscore."
+    m_underscore = ArrayField(models.FloatField(), size=3)
     heading_unwrapped = models.FloatField()
     heading_gyro_unwrapped = models.FloatField()
     heading_fusion_unwrapped = models.FloatField()
-    #TODO confirm that a models.BinaryField is appropriate
-    #byte calibration_ok = b.get();
-    calibration_ok = models.BinaryField()
+    # TODO confirm that a models.BinaryField is appropriate
+    calibration_ok = models.BinaryField() # byte calibration_ok = b.get();
     state = models.IntegerField()
     radius = models.FloatField()
     error_mean = models.FloatField()
     error_var = models.FloatField()
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
 
-# Euler angles. but where's psi?
-class AttitudeData(models.Model):
+
+# TODO Ask front-end devs why psi is not included with the Euler angles.
+class AttitudeData(NavData):
     theta = models.FloatField()
     phi = models.FloatField()
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
 
-class AltitudeData(models.Model):
+
+class AltitudeData(NavData):
     # 16-bit integer
     altitude_vision = models.IntegerField()
     # 7-digit precision float
     altitude_vz = models.FloatField()
     altitude_ref = models.IntegerField()
     altitude_raw = models.IntegerField()
-    obs_accZ = models.FloatField()
+    obs_acc_z = models.FloatField()
     obs_alt = models.FloatField()
     # array of floats
-    obs_x = models.ArrayField(models.FloatField(), size=3)
+    obs_x = ArrayField(models.FloatField(), size=3)
     obs_state = models.IntegerField()
-    est_vb = models.ArrayField(models.FloatField(), size=2)
+    est_vb = ArrayField(models.FloatField(), size=2)
     est_state = models.IntegerField()
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
 
-class GPSData(models.Model):
+
+class GPSData(NavData):
     # max integer part is 3 digits, so assign 13 fractional digits
     latitude = models.DecimalField(max_digits=16, decimal_places=13)
     longitude = models.DecimalField(max_digits=16, decimal_places=13)
-    latitudeZero = models.DecimalField(max_digits=16, decimal_places=13)
-    longitudeZero = models.DecimalField(max_digits=16, decimal_places=13)
-    latitudeFused = models.DecimalField(max_digits=16, decimal_places=13)
-    longitudeFused = models.DecimalField(max_digits=16, decimal_places=13)
-    attitudeFused = models.DecimalField(max_digits=16, decimal_places=13)
+    latitude_zero = models.DecimalField(max_digits=16, decimal_places=13)
+    longitude_zero = models.DecimalField(max_digits=16, decimal_places=13)
+    latitude_fused = models.DecimalField(max_digits=16, decimal_places=13)
+    longitude_fused = models.DecimalField(max_digits=16, decimal_places=13)
+    attitude_fused = models.DecimalField(max_digits=16, decimal_places=13)
     # max integer part is 4 digits, so assign 12 fractional digits
     elevation = models.DecimalField(max_digits=16, decimal_places=12)
     # TODO what is hdop? how many digits long are its whole and fractional parts?
     hdop = models.DecimalField(max_digits=16, decimal_places=12)
-    dataAvailable = models.IntegerField()
-    zeroValidated = models.BooleanField()
-    wptValidated = models.BooleanField()
+    data_available = models.IntegerField()
+    zero_validated = models.BooleanField()
+    wpt_validated = models.BooleanField()
     # TODO haw large can a gpsState value be? The IntegerField is 32-bit
-    gpsState = models.IntegerField()
-    xTrajectory = models.FloatField()
-    yTrajectory = models.FloatField()
-    xReference = models.FloatField()
-    yReference = models.FloatField()
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
+    gps_state = models.IntegerField()
+    x_trajectory = models.FloatField()
+    y_trajectory = models.FloatField()
+    x_reference = models.FloatField()
+    y_reference = models.FloatField()
 
-class BatteryVoltageData(models.Model):
+
+class BatteryVoltageData(NavData):
     voltage = models.IntegerField()
-    navdata = models.ForeignKey(NavData, on_delete=models.CASCADE)
 
-#### JSONModels
+# the id will be generated by django automatically
+# class User(models.Model):
+#     role = models.CharField(max_length=100)
+#     first_name = models.CharField(max_length=100)
+#     last_name = models.CharField(max_length=100)
+#     email = models.CharField(max_length=100)
+# JSONModels
 
