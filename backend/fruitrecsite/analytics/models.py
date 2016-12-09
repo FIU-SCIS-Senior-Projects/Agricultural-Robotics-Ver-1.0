@@ -8,7 +8,7 @@ from django.contrib.postgres.fields import ArrayField
 
 
 class Mission(models.Model):
-    name = models.CharField(max_length=200)
+    # name = models.CharField(max_length=200)
     drone_ssid = models.CharField(max_length=200)
 
 #######################################################################
@@ -55,7 +55,7 @@ class AcceleroPhysData(NavData):
     alim_3v3 = models.IntegerField()
 
 
-class GyroRawData(NavData):
+class GyroRawData(models.Model):
     raw_gyros = ArrayField(models.IntegerField(), size=3)
     raw_gyros_110 = ArrayField(models.IntegerField(), size=2)
 
