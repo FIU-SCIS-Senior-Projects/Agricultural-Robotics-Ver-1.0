@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'blat/style.css' %}">
+	<title>{% block title %} Agricultural Robotics:{% endblock %}</title>
+</head>
+
+<body>
+	<header>
+	<h1><a href="{%url 'homepage' %}">Crop Stats</a></h1>
+	<nav>
+		<ul>
+		{% if user.is_authenticated %}
+			<li><a href="{%url 'myview'%}">My Crops</a></li>
+			<li><a href="{%url 'logout'%}?next=/">Logout
+<a></li>
+		{%else %}
+			<li><a href="/login/?next=/">Log in<a></li>
+		{% endif %}
+		</ul>
+	</nav>
+	</header>
+	<div id="content">
+		{% block content %}{% endblock %}
+	</div>
+</body>
+</html>

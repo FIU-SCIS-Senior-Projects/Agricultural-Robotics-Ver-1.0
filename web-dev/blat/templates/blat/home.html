@@ -1,0 +1,19 @@
+{% extends "blat/master.html"%}
+{% load humanize %}
+
+{% block content %}
+{% if blat_list %}
+	<dl>
+	{% for blat in blat_list %}
+	  <dt>{{blat.Mission}}</dt>
+	  <dd>
+		<a href="{%url 'detail' pk=blat.id%}">{{blat.created_on|naturaltime}}</a> by @{{blat.created_by}}
+		{% if blat.via %}
+		<a href="{{blat.via}}">/via</a>
+		{% endif %}
+{% endfor %}
+</dl>
+{% else %}
+ Hello World
+{% endif %}
+{% endblock %}
