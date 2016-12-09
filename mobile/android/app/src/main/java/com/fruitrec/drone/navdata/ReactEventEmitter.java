@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import de.yadrone.base.navdata.NavDataManager;
+import com.fruitrec.navdata.NavDataManager;
 
 public abstract class ReactEventEmitter {
 

@@ -1,14 +1,13 @@
 package com.fruitrec.drone.navdata;
 
-
 import android.util.Log;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.WritableMap;
 
-import de.yadrone.base.navdata.AttitudeListener;
-import de.yadrone.base.navdata.NavDataManager;
+import com.fruitrec.navdata.AttitudeListener;
+import com.fruitrec.navdata.NavDataManager;
 
 public class AttitudeEmitter extends ReactEventEmitter implements AttitudeListener {
 

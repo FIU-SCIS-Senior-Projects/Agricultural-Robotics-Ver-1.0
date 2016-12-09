@@ -6,9 +6,9 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.WritableMap;
 
-import de.yadrone.base.navdata.Altitude;
-import de.yadrone.base.navdata.AltitudeListener;
-import de.yadrone.base.navdata.NavDataManager;
+import com.fruitrec.navdata.Altitude;
+import com.fruitrec.navdata.AltitudeListener;
+import com.fruitrec.navdata.NavDataManager;
 
 public class AltitudeEmitter extends ReactEventEmitter implements AltitudeListener {
 

@@ -2,9 +2,8 @@ package com.fruitrec.drone.navdata;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 
-import de.yadrone.base.navdata.NavDataManager;
-import de.yadrone.base.navdata.TimeListener;
-
+import com.fruitrec.navdata.NavDataManager;
+import com.fruitrec.navdata.TimeListener;
 
 public class TimeEmitter extends ReactEventEmitter implements TimeListener {
     public TimeEmitter(ReactApplicationContext context, NavDataManager manager) {

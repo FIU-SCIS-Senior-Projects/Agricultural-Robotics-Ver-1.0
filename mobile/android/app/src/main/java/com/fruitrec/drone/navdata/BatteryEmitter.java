@@ -6,9 +6,8 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.WritableMap;
 
-import de.yadrone.base.navdata.BatteryListener;
-import de.yadrone.base.navdata.NavDataManager;
-
+import com.fruitrec.navdata.BatteryListener;
+import com.fruitrec.navdata.NavDataManager;
 
 public class BatteryEmitter extends ReactEventEmitter implements BatteryListener {
 

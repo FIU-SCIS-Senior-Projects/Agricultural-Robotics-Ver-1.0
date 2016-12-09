@@ -12,12 +12,9 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import de.yadrone.base.ARDrone;
-import de.yadrone.base.IARDrone;
-import de.yadrone.base.navdata.AltitudeListener;
-import de.yadrone.base.navdata.GPSListener;
-import de.yadrone.base.navdata.GyroListener;
-import de.yadrone.base.navdata.NavDataManager;
+import com.fruitrec.drone.ARDrone;
+import com.fruitrec.drone.IARDrone;
+import com.fruitrec.navdata.NavDataManager;
 
 public class NavDataServiceModule extends ReactContextBaseJavaModule {
 

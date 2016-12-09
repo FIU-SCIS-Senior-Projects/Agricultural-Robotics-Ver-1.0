@@ -6,10 +6,9 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.WritableMap;
 
-import de.yadrone.base.navdata.MagnetoData;
-import de.yadrone.base.navdata.MagnetoListener;
-import de.yadrone.base.navdata.NavDataManager;
-
+import com.fruitrec.navdata.MagnetoData;
+import com.fruitrec.navdata.MagnetoListener;
+import com.fruitrec.navdata.NavDataManager;
 
 public class MagnetoEmitter extends ReactEventEmitter implements MagnetoListener {
 

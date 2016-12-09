@@ -6,11 +6,10 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.WritableMap;
 
-import de.yadrone.base.navdata.GyroListener;
-import de.yadrone.base.navdata.GyroPhysData;
-import de.yadrone.base.navdata.GyroRawData;
-import de.yadrone.base.navdata.NavDataManager;
-
+import com.fruitrec.navdata.GyroListener;
+import com.fruitrec.navdata.GyroPhysData;
+import com.fruitrec.navdata.GyroRawData;
+import com.fruitrec.navdata.NavDataManager;
 
 public class GyroEmitter extends ReactEventEmitter implements GyroListener {
 

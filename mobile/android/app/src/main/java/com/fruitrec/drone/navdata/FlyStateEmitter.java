@@ -6,10 +6,10 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.WritableMap;
 
-import de.yadrone.base.navdata.ControlState;
-import de.yadrone.base.navdata.DroneState;
-import de.yadrone.base.navdata.NavDataManager;
-import de.yadrone.base.navdata.StateListener;
+import com.fruitrec.navdata.ControlState;
+import com.fruitrec.navdata.DroneState;
+import com.fruitrec.navdata.NavDataManager;
+import com.fruitrec.navdata.StateListener;
 
 public class FlyStateEmitter extends ReactEventEmitter implements StateListener {
 

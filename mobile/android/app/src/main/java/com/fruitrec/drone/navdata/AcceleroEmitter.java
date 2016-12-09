@@ -6,11 +6,10 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.WritableMap;
 
-import de.yadrone.base.navdata.AcceleroListener;
-import de.yadrone.base.navdata.AcceleroPhysData;
-import de.yadrone.base.navdata.AcceleroRawData;
-import de.yadrone.base.navdata.NavDataManager;
-
+import com.fruitrec.navdata.AcceleroListener;
+import com.fruitrec.navdata.AcceleroPhysData;
+import com.fruitrec.navdata.AcceleroRawData;
+import com.fruitrec.navdata.NavDataManager;
 
 public class AcceleroEmitter extends ReactEventEmitter implements AcceleroListener {
 
