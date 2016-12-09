@@ -81,7 +81,7 @@ class GyroRawDataNode(DjangoObjectType):
         interfaces = (relay.Node,)
 
 
-GyroRawData.Connection = connection_for_type(GyroRawDataNode)
+GyroRawDataNode.Connection = connection_for_type(GyroRawDataNode)
 
 
 # class GyroPhysDataNode(DjangoObjectType):
@@ -149,7 +149,7 @@ class Query(graphene.ObjectType):
     # all_battery_voltage_data = DjangoFilterConnectionField(BatteryVoltageData)
 
     gyro_raw_data = relay.Node.Field(GyroRawDataNode)
-    all_gyro_raw_data = DjangoFilterConnectionField(GyroRawDataNode)
+    all_gyro_raw_data = relay.Node.Field(GyroRawDataNode)
 
     # gyro_phys_data = relay.Node.Field(GyroPhysData)
     # all_gyro_phys_data = DjangoFilterConnectionField(GyroPhysData)
@@ -159,12 +159,22 @@ class Query(graphene.ObjectType):
 
     # battery_voltage_data = relay.Node.Field(BatteryVoltageData)
     # all_battery_voltage_data = DjangoFilterConnectionField(BatteryVoltageData)
-    viewer = graphene.Field(lambda: Query)
+    # viewer = graphene.Field(lambda: Query)
+    #
+    # debug = graphene.Field(DjangoDebug, name='__debug')
+    #
+    # def resolve_viewer(self, *args, **kwargs):
+    #     return self
 
-    debug = graphene.Field(DjangoDebug, name='__debug')
-
-    def resolve_viewer(self, *args, **kwargs):
-        return self
+    node = relay.Node.Field()
+    #
+    # @resolve_only_args
+    # def resolve_gyro_raw_data(self):
+    #     return get_gyro_raw_data()
+    #
+    # @resolve_only_args
+    # def resolve_gyro_raw_data(self):
+    #     return get_all_gyro_raw_data()
 
 
 class CreateGyroRawData(graphene.ClientIDMutation):
@@ -173,11 +183,11 @@ class CreateGyroRawData(graphene.ClientIDMutation):
         raw_gyros = graphene.List(graphene.Int)
         raw_gyros_110 = graphene.List(graphene.Int)
 
-    gyro_raw_data = graphene.Field(GyroRawDataNode)
-    ok = graphene.Boolean()
+    # gyro_raw_data = graphene.Field(GyroRawDataNode)
+    # ok = graphene.Boolean()
 
     @classmethod
-    def mutate_and_get_payload(cls, input, info):
+    def mutate_and_get_payload(cls, input, context, info):
         raw_gyros = input.get('raw_gyros')
         try:
             raw_gyros = [int(g) for g in raw_gyros]
@@ -203,7 +213,7 @@ class CreateGyroRawData(graphene.ClientIDMutation):
 
 
 class Mutation(graphene.ObjectType):
-    create_gyro_raw_data = graphene.Field(CreateGyroRawData)
+    create_gyro_raw_data = CreateGyroRawData.Field()
 
 
 schema = graphene.Schema(
