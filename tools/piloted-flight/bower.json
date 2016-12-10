@@ -1,7 +1,0 @@
-{
-  "name": "ardrone-webflight",
-  "dependencies": {
-    "jquery": "~1.9.1",
-    "bootstrap.css": "~2.1.1"
-  }
-}
